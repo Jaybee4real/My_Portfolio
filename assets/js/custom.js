@@ -122,9 +122,8 @@ const scene = new Scene({
   scene.setPlaySpeed(0.9);
   scene.setEasing("ease-in-out");
   scene.setIterationCount("infinite");
-//   scene.play();
+  scene.play();
   
-  
-  // new Timeline(scene, document.body)
+
 
 
