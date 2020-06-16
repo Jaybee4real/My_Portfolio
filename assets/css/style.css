@@ -63,7 +63,7 @@ body {
   padding: 0;
   top: 100px;
   line-height: 1;
-  color: white;
+  color: black;
 }
 
 [data-typing="i"] {
@@ -144,31 +144,24 @@ body {
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
 body {
-  background-color: white;
+  background-color: black;
   -webkit-animation: change-back 16s ease-in-out;
   animation: change-back 16s ease-in-out;
 }
 
-@-webkit-keyframes change-back {
-  0% {
-    background-color: black;
-  }
-  100% {
-    background-color: white;
-  }
-}
+
 
 @keyframes change-back {
   0% {
-    background-color: black;
+    background-color: white;
   }
   100% {
-    background-color: white;
+    background-color: black;
   }
 }
 
@@ -181,6 +174,7 @@ body .scenejs-editor-timeline {
 .fa-arrow-down {
   -webkit-animation: move-down 1s linear infinite;
   animation: move-down 1s linear infinite;
+  color: black !important;
 }
 
 @-webkit-keyframes move-down {

@@ -140,7 +140,7 @@ window.addEventListener("load", () => {
   }, 2000);
   window.setTimeout(() => {
     document.querySelectorAll("a").forEach((element) => {
-      element.style.color = "#333";
+      element.style.color = "white";
       element.style.transition = "1s all ease-out";
     });
     document.querySelectorAll("p").forEach((element) => {
