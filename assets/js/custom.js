@@ -40,12 +40,10 @@
       req.send();
     }
     var a = document.createElement("a");
-    a.setAttribute("href", "https://github.com/daybrush/scenejs");
-    a.setAttribute("target", "_blank");
+    a.setAttribute("href", "#");
     a.style.cssText =
-      "position: fixed; bottom: 10px;right: 10px;width: 40px;height: 40px;line-height: 40px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 0px;box-sizing: border-box;text-align: center; text-decoration: none; color: black; font-weight: bold; font-family: sans-serif;font-size: 20px;";
-    // a.innerHTML = '<img src="https://daybrush.com/scenejs/images/clapperboard.png" style="width: 95%;margin-top: 3px"/>';
-    a.innerHTML = "?";
+      "position: fixed; left: 50%; bottom: 10px;width: 40px;height: 40px;line-height: 40px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 0px;box-sizing: border-box;text-align: center; text-decoration: none; color: black; font-weight: bold; font-family: sans-serif;font-size: 20px;";
+    a.innerHTML = "<i class='fa fa-arrow-down'></i>";
 
     a.addEventListener("click", function () {
       ga(
@@ -84,14 +82,14 @@ function move(startTime, endTime, left, top, rotate, scale) {
   });
 }
 
-move(0, 0, 90, 115, 0, 5);
-move(1, 1, 90, 115, 0, 2);
+move(0, 0.2, 90, 115, 0, 5);
+move(1, 1.2, 90, 115, 0, 2);
 move(2, 3, 0, 115, 0, 1);
 move(4, 4.5, -100, 0, -90, 2);
 move(5.5, 6, -52, -18, -90, 1.6);
 move(7, 7.5, 30, 45, 0, 2);
 move(8.5, 9, 10, 30, 0, 3);
-move(10, 10.5, 28, 0, 0, 2.2);
+move(10, 10.5, 28, 0, 0, 1.6);
 move(11.5, 12, 50, -35, 0, 1.65);
 move(13, 13.5, 35, -70, 0, 2);
 move(14.5, 18, 0, 0, 0, 1);
@@ -129,5 +127,23 @@ scene.set({
 
 scene.setPlaySpeed(0.9);
 scene.setEasing("ease-in-out");
-scene.setIterationCount("infinite");
+scene.setIterationCount(1);
 scene.play();
+
+window.addEventListener("load", () => {
+  window.setTimeout(() => {
+    document.querySelectorAll("a").forEach((element) => {
+      element.style.color = "#333";
+      element.style.transition = "1s all ease-out";
+    });
+    document.querySelectorAll("p").forEach((element) => {
+      element.style.color = "#b8860b";
+      element.style.transition = "1s all ease-out";
+    });
+  }, 8500);
+});
+
+
+window.setTimeout(() => {
+
+})
