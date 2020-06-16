@@ -128,9 +128,16 @@ scene.set({
 scene.setPlaySpeed(0.9);
 scene.setEasing("ease-in-out");
 scene.setIterationCount(1);
-scene.play();
+
+
 
 window.addEventListener("load", () => {
+  window.setTimeout(() => {
+    scene.play();
+    document.querySelector(".wrapper").classList.remove("hidden");
+    document.querySelector(".preloader-container").style.transform = "translateX(-100vw)"
+    document.querySelector(".preloader-container").classList.add("finished")
+  }, 2000);
   window.setTimeout(() => {
     document.querySelectorAll("a").forEach((element) => {
       element.style.color = "#333";
@@ -142,8 +149,3 @@ window.addEventListener("load", () => {
     });
   }, 8500);
 });
-
-
-window.setTimeout(() => {
-
-})
