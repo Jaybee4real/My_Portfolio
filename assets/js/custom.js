@@ -42,7 +42,7 @@
     var a = document.createElement("a");
     a.setAttribute("href", "#");
     a.style.cssText =
-      "position: fixed; left: 50%; bottom: 10px;width: 40px;height: 40px;line-height: 40px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 0px;box-sizing: border-box;text-align: center; text-decoration: none; color: black; font-weight: bold; font-family: sans-serif;font-size: 20px;";
+      "position: fixed; left: calc(50% - 40px); bottom: 10px;width: 40px;height: 40px;line-height: 40px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 0px;box-sizing: border-box;text-align: center; text-decoration: none; color: black; font-weight: bold; font-family: sans-serif;font-size: 20px;";
     a.innerHTML = "<i class='fa fa-arrow-down'></i>";
 
     a.addEventListener("click", function () {
@@ -132,12 +132,13 @@ scene.setIterationCount(1);
 window.addEventListener("load", () => {
   window.setTimeout(() => {
     document.querySelector(".animate").style.animation = "none";
-    document.querySelector(".animate").style.color ="white";
-    document.querySelector(".animate").innerHTML = "Loaded <i style='margin-left: .7rem' class='fa fa-arrow-right'></>";
+    document.querySelector(".animate").style.color = "white";
+    document.querySelector(".animate").innerHTML =
+      "Loaded <i style='margin-left: .7rem' class='fa fa-arrow-right'></>";
   }, 1500);
   window.setTimeout(() => {
     scene.play();
-    document.querySelector(".wrapper").classList.remove("hidden");
+    document.querySelector(".wrapper-container").classList.remove("hidden");
     document.querySelector(".preloader-container").style.transform =
       "translateX(-100vw)";
     document.querySelector(".preloader-container").classList.add("finished");
@@ -153,3 +154,9 @@ window.addEventListener("load", () => {
     });
   }, 8500);
 });
+
+window.setTimeout(() => {
+  document.querySelector(".wrapper-container").style.transform =
+    "translateY(-100vw)";
+  document.querySelector(".wrapper-container").classList.add('finished');
+}, 19000);
