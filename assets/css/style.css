@@ -7,11 +7,11 @@ body {
   font-size: 20px;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   -webkit-transition: 2s all ease-out;
   transition: 2s all ease-out;
   -webkit-transition-delay: -1s;
   transition-delay: -1s;
+  background-color: #222;
 }
 
 body {
@@ -192,4 +192,15 @@ body .scenejs-editor-timeline {
   100% {
     top: 2rem;
   }
+}
+
+
+
+/* //////////////////////////Preloaders End////////////////////////// */
+
+
+.main-content{
+  position: absolute;
+  width: 100vw;
+  min-height: 200vh;
 }

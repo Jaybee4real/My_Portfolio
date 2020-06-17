@@ -1,14 +1,14 @@
-body,
-.preloader {
-  display: flex;
-}
+
 
 body {
   line-height: 1.5;
   perspective: 40em;
+  display: flex;
+  overflow-x: hidden;
 }
 
 .preloader {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -17,6 +17,7 @@ body {
   width: 17em;
   height: 17em;
   position: absolute;
+  overflow: hidden;
 }
 
 .preloader-container {
@@ -27,16 +28,18 @@ body {
   align-items: center;
   transition: all 0.5s ease-in-out;
   background-color: black;
+  overflow: hidden;
 }
 
 .wrapper-container{
   position: absolute;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   display: flex;
   align-items: center;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 
@@ -78,14 +81,12 @@ body {
 
 }
 
-.preloader-container.finished::before,.wrapper-container.finished::before {
+.preloader-container.finished::before,.wrapper-container.finished::before{
   transition: all 1.5s ease-in-out;
   transition-delay: -.5s;
 }
 
-body {
-  background-color: #222;
-}
+
 #preloader {
   position: fixed;
   top: 0;
@@ -178,10 +179,6 @@ body {
   text-shadow: 0 0 1px white;
   margin-top: 2rem;
   transition:  all .3s ease-in-out;
-}
-body,
-html {
-  height: 96vh;
-  background-color: #111;
   color: orange;
 }
+

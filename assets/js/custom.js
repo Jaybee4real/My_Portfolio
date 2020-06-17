@@ -159,4 +159,7 @@ window.setTimeout(() => {
   document.querySelector(".wrapper-container").style.transform =
     "translateY(-100vw)";
   document.querySelector(".wrapper-container").classList.add('finished');
+  document.querySelector(".main-content").classList.remove('hidden');
 }, 19000);
+
+
