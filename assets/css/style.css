@@ -25,13 +25,10 @@ body {
 }
 
 .wrapper {
-  position: absolute;
   width: 300px;
   height: 300px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) translateY(20px) scale(1.5);
-  transform: translate(-50%, -50%) translateY(20px) scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
   overflow: hidden;
 }
 
@@ -41,8 +38,8 @@ body {
 
 @media screen and (max-width: 600px) {
   .wrapper {
-    -webkit-transform: translate(-50%, -50%) scale(1);
-    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform:  scale(1);
+    transform:  scale(1);
   }
 }
 

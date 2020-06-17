@@ -30,6 +30,7 @@ body {
 }
 
 .wrapper-container{
+  position: absolute;
   height: 100vh;
   width: 100vw;
   justify-content: center;
@@ -44,6 +45,7 @@ body {
 .preloader-container::before,
 .wrapper-container::after,
 .wrapper-container::before {
+  position: absolute;
   content: "";
   background-color: orange;
   height: 100%;
@@ -66,19 +68,19 @@ body {
 .wrapper-container.finished::after,
 .wrapper-container.finished::before{
   transform: translateX(-100vw);
+  transition-delay: .2s;
   transition: all 1.5s ease-in-out;
-  transition-delay: 0.15s;
 }
 
 .wrapper-container.finished::after,
 .wrapper-container.finished::before{
-  transform: translateY(-100vw);
+  transform: translateY(-100vh);
 
 }
 
 .preloader-container.finished::before,.wrapper-container.finished::before {
-  transition-delay: 0.19s;
   transition: all 1.5s ease-in-out;
+  transition-delay: -.5s;
 }
 
 body {
