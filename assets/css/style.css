@@ -11,8 +11,9 @@ body {
   transition: 2s all ease-out;
   -webkit-transition-delay: -1s;
   transition-delay: -1s;
-  background-color: #222;
+  background-color: black;
 }
+
 
 body {
   background: line;
@@ -172,6 +173,24 @@ body .scenejs-editor-timeline {
   -webkit-animation: move-down 1s linear infinite;
   animation: move-down 1s linear infinite;
   color: black !important;
+}
+
+.arrow{
+  position: fixed;
+}
+
+.skip{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: .8rem;
+  border: 2px solid orange;
+  padding: 0 .5rem ;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.skip:hover{
+  background-color: orange;
 }
 
 @-webkit-keyframes move-down {

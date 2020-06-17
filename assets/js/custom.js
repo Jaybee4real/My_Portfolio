@@ -39,19 +39,15 @@
       );
       req.send();
     }
-    var a = document.createElement("a");
-    a.setAttribute("href", "#");
-    a.style.cssText =
-      "position: fixed; left: calc(50% - 40px); bottom: 10px;width: 40px;height: 40px;line-height: 40px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 0px;box-sizing: border-box;text-align: center; text-decoration: none; color: black; font-weight: bold; font-family: sans-serif;font-size: 20px;";
-    a.innerHTML = "<i class='fa fa-arrow-down'></i>";
 
-    a.addEventListener("click", function () {
-      ga(
-        "event",
-        "&ec=scene&ea=click&ev=" + Math.floor((Date.now() - startTime) / 1000)
-      );
-    });
-    document.body.appendChild(a);
+    // var a = document.createElement("a");
+    // a.setAttribute("href", "#");
+    // a.style.cssText =
+    //   "position: fixed; margin-left: calc(50% - 40px); bottom: 10px;width: 40px;height: 40px;line-height: 40px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 0px;box-sizing: border-box;text-align: center; text-decoration: none; color: black; font-weight: bold; font-family: sans-serif;font-size: 20px;";
+    // a.innerHTML = "<i class='fa fa-arrow-down'></i>";
+    // a.classList.add("arrow");
+
+    // document.querySelector(".main-content").appendChild(a);
 
     ga("pageview", "");
   } catch (e) {}
@@ -155,11 +151,30 @@ window.addEventListener("load", () => {
   }, 8500);
 });
 
+document.querySelector(".skip").addEventListener("click", () => {
+  scene.end();
+    document.querySelector(".wrapper-container").style.transform =
+      "translateY(-100vw)";
+  document.querySelector(".wrapper-container").classList.add("finished");
+  document.querySelector("body").style.animation = "none"
+  document.querySelector("body").style.backgroundColor = "black"
+  document.querySelector(".main-content").classList.remove("hidden");
+
+
+})
+
 window.setTimeout(() => {
   document.querySelector(".wrapper-container").style.transform =
     "translateY(-100vw)";
-  document.querySelector(".wrapper-container").classList.add('finished');
-  document.querySelector(".main-content").classList.remove('hidden');
+  document.querySelector(".wrapper-container").classList.add("finished");
+  document.querySelector(".main-content").classList.remove("hidden");
 }, 19000);
 
-
+document.addEventListener("scroll", function (e) {
+  var offset = window.pageYOffset;
+  if (offset > 1) {
+    document.querySelector(".arrow").style.marginLeft = "90%";
+  } else {
+    document.querySelector(".arrow").style.marginLeft = "calc(50% - 40px)";
+  }
+});
