@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,900;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap');
 html,
 body {
   position: relative;
@@ -62,6 +63,7 @@ body {
   top: 100px;
   line-height: 1;
   color: black;
+  font-weight: 900;
 }
 
 [data-typing="i"] {
@@ -70,6 +72,8 @@ body {
   font-size: 90px;
   height: 70px;
   line-height: 70px;
+  font-weight: 900;
+
 }
 
 [data-typing="name"] {
@@ -80,6 +84,8 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: 900;
+
 }
 
 [data-typing="engineer"] {
@@ -87,6 +93,8 @@ body {
   left: 80px;
   font-size: 30px;
   letter-spacing: 1px;
+  font-weight: 900;
+
 }
 
 [data-typing="with"] {
@@ -98,9 +106,11 @@ body {
   background: #333;
   color: #fff;
   padding: 0px 4px;
+  font-weight: 900;
+
 }
 
-[data-typing="javascript"] {
+[data-typing="skills-in"] {
   top: 94px;
   left: 229px;
   -webkit-transform: rotate(90deg);
@@ -109,21 +119,27 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: 900;
+
 }
 
 [data-typing="typescript"] {
   top: 87px;
   right: 110px;
   font-size: 25px;
+  font-weight: 900;
+
 }
 
 [data-typing="css"] {
   top: 115px;
   right: 110px;
   font-size: 18px;
+  font-weight: 900;
+
 }
 
-[data-typing="nodejs"] {
+[data-typing="app-dev"] {
   top: 134px;
   right: 110px;
   font-size: 12px;
@@ -222,4 +238,36 @@ body .scenejs-editor-timeline {
   position: absolute;
   width: 100vw;
   min-height: 200vh;
+}
+
+
+.navbar{
+  width: 100vw;
+  display: flex;
+  color: orange !important;
+  flex-direction: row !important;
+  height: 3rem;
+  background-color: grey;
+  align-items: center;
+}
+
+.navbar .logo{
+  margin: .5rem 1rem;
+  margin-right: 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Bellota', cursive;
+  cursor: pointer;
+}
+
+.navbar .nav-item{
+  color: orange !important;
+  margin: .5rem 1rem;
+  font-weight:300 !important;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.navbar .nav-item:hover{
+  color: white !important;
 }

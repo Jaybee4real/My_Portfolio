@@ -101,7 +101,7 @@ scene.set({
   "[data-typing='with']": {
     3.3: Scene.typing({ text: "with", duration: 0.5 }),
   },
-  "[data-typing='javascript']": {
+  "[data-typing='skills-in']": {
     4.5: Scene.typing({ text: "Skills In", duration: 1 }),
   },
   "[data-typing='typescript']": {
@@ -110,7 +110,7 @@ scene.set({
   "[data-typing='css']": {
     7.5: Scene.typing({ text: "CSS/SCSS", duration: 0.7 }),
   },
-  "[data-typing='nodejs']": {
+  "[data-typing='app-dev']": {
     9: Scene.typing({ text: "Mobile App Development", duration: 1 }),
   },
   "[data-typing='animation']": {
@@ -140,11 +140,11 @@ window.addEventListener("load", () => {
     document.querySelector(".preloader-container").classList.add("finished");
   }, 2000);
   window.setTimeout(() => {
-    document.querySelectorAll("a").forEach((element) => {
+    document.querySelectorAll(".color-change-a").forEach((element) => {
       element.style.color = "white";
       element.style.transition = "1s all ease-out";
     });
-    document.querySelectorAll("p").forEach((element) => {
+    document.querySelectorAll(".color-change-p").forEach((element) => {
       element.style.color = "orange";
       element.style.transition = "1s all ease-out";
     });
@@ -168,7 +168,7 @@ window.setTimeout(() => {
     "translateY(-100vw)";
   document.querySelector(".wrapper-container").classList.add("finished");
   document.querySelector(".main-content").classList.remove("hidden");
-}, 19000);
+}, 20000);
 
 document.addEventListener("scroll", function (e) {
   var offset = window.pageYOffset;
