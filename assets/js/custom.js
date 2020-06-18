@@ -125,6 +125,8 @@ scene.setPlaySpeed(0.9);
 scene.setEasing("ease-in-out");
 scene.setIterationCount(1);
 
+
+
 window.addEventListener("load", () => {
   window.setTimeout(() => {
     document.querySelector(".animate").style.animation = "none";
@@ -132,25 +134,33 @@ window.addEventListener("load", () => {
     document.querySelector(".animate").innerHTML =
       "Loaded <i style='margin-left: .7rem' class='fa fa-arrow-right'></>";
   }, 1500);
-  window.setTimeout(() => {
-    scene.play();
-    document.querySelector(".wrapper-container").classList.remove("hidden");
-    document.querySelector(".preloader-container").style.transform =
-      "translateX(-100vw)";
-    document.querySelector(".preloader-container").classList.add("finished");
-  }, 2000);
-  window.setTimeout(() => {
-    document.querySelectorAll(".color-change-a").forEach((element) => {
-      element.style.color = "white";
-      element.style.transition = "1s all ease-out";
-    });
-    document.querySelectorAll(".color-change-p").forEach((element) => {
-      element.style.color = "orange";
-      element.style.transition = "1s all ease-out";
-    });
-  }, 8500);
 });
 
+
+
+window.setTimeout(() => {
+  document.querySelectorAll(".color-change-a").forEach((element) => {
+    element.style.color = "white";
+    element.style.transition = "1s all ease-out";
+  });
+  document.querySelectorAll(".color-change-p").forEach((element) => {
+    element.style.color = "orange";
+    element.style.transition = "1s all ease-out";
+  });
+}, 8500);
+
+window.setTimeout(() => {
+  scene.play();
+  document.querySelector(".wrapper-container").classList.remove("hidden");
+  document.querySelector(".preloader-container").style.transform =
+    "translateX(-100vw)";
+  document.querySelector(".preloader-container").classList.add("finished");
+}, 2000);
+
+
+
+
+///////////////Skip Button//////////
 document.querySelector(".skip").addEventListener("click", () => {
   scene.end();
     document.querySelector(".wrapper-container").style.transform =
@@ -162,6 +172,8 @@ document.querySelector(".skip").addEventListener("click", () => {
 
 
 })
+// ////////////////////////////
+
 
 window.setTimeout(() => {
   document.querySelector(".wrapper-container").style.transform =
