@@ -2,7 +2,7 @@
 
 body {
   line-height: 1.5;
-  perspective: 40em;
+  /* perspective: 40em; */
   display: flex;
   overflow-x: hidden;
 }

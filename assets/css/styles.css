@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,900;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap");
+:root {
+  --theme-color: orange;
+  --secondary-color: white;
+  --background-color: black;
+  --text-color-1: orange;
+  --text-color-2: white;
+}
+
 html,
 body {
   position: relative;
@@ -13,10 +21,6 @@ body {
   -webkit-transition-delay: -1s;
   transition-delay: -1s;
   background-color: black;
-}
-
-body {
-  background: line;
 }
 
 * {
@@ -52,7 +56,6 @@ body {
 [data-typing] {
   position: absolute;
   top: 0;
-  /*   border: 1px solid #f55; */
   -webkit-transform-origin: 0% 0%;
   transform-origin: 0% 0%;
   font-size: 25px;
@@ -197,15 +200,15 @@ body .scenejs-editor-timeline {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  font-size: .8rem;
-  border: 2px solid orange;
-  padding: 0 .5rem;
+  font-size: 0.8rem;
+  border: 2px solid var(--theme-color);
+  padding: 0 0.5rem;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .skip:hover {
-  background-color: orange;
+  background-color: var(--theme-color);
 }
 
 @-webkit-keyframes move-down {
@@ -232,7 +235,6 @@ body .scenejs-editor-timeline {
 .main-content {
   position: absolute;
   width: 100vw;
-  min-height: 200vh;
 }
 
 .navbar {
@@ -240,7 +242,7 @@ body .scenejs-editor-timeline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: orange !important;
+  color: var(--text-color-1) !important;
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: row !important;
@@ -249,28 +251,29 @@ body .scenejs-editor-timeline {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
 }
 
 .navbar .logo {
-  margin: .5rem 1rem;
+  margin: 0.5rem 1rem;
   margin-right: 3rem;
   font-weight: 700;
   font-size: 1.5rem;
-  font-family: 'Bellota', cursive;
+  font-family: "Bellota", cursive;
   cursor: pointer;
 }
 
 .navbar .nav-item {
-  color: orange !important;
-  margin: .5rem 1rem;
+  color: var(--text-color-1) !important;
+  margin: 0.5rem 1rem;
   font-weight: 300 !important;
   cursor: pointer;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar .nav-item.active {
-  color: white !important;
+  color: var(--text-color-2) !important;
 }
 
 .mobile-nav-toggle {
@@ -278,72 +281,74 @@ body .scenejs-editor-timeline {
   width: 1.6rem;
   border-radius: 5px;
   position: absolute;
-  background-color: white;
+  background-color: var(--text-color-2);
   right: 2rem;
+  margin: 5px 0;
   cursor: pointer;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .mobile-nav-toggle:before {
   content: "";
   position: absolute;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
   height: 4px;
   width: 1rem;
   right: 0;
   border-radius: 5px;
-  background-color: orange;
+  background-color: var(--text-color-1);
   cursor: pointer;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .mobile-nav-toggle:hover {
-  background-color: orange;
+  background-color: var(--text-color-1);
 }
 
-.mobile-nav-toggle::before:hover, .mobile-nav-toggle::after:hover {
-  background-color: white;
+.mobile-nav-toggle::before:hover,
+.mobile-nav-toggle::after:hover {
+  background-color: var(--text-color-2);
 }
 
 .mobile-nav-toggle::after {
   content: "";
   position: absolute;
   height: 4px;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
   width: 1rem;
   border-radius: 5px;
-  background-color: orange;
+  background-color: var(--text-color-1);
   cursor: pointer;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .mobile-nav-toggle.active ::before {
-  background-color: orange;
+  background-color: var(--text-color-1);
   width: 1rem;
 }
 
 .mobile-nav-toggle:hover::after {
-  background-color: white !important;
+  background-color: var(--text-color-2) !important;
   width: 100%;
 }
 
 .mobile-nav-toggle:hover::before {
-  background-color: white !important;
+  background-color: var(--text-color-2) !important;
   width: 100%;
 }
 
 .navbar .nav-item:hover {
-  color: white !important;
+  color: var(--text-color-1) !important;
 }
 
 @media (max-width: 1080px) {
   .navbar .nav-item {
-    margin: .5rem .5rem;
+    margin: 0.5rem 0.5rem;
   }
 }
 
@@ -351,5 +356,53 @@ body .scenejs-editor-timeline {
   .navbar .nav-item {
     display: none;
   }
+}
+
+.mode-toggle {
+  position: fixed;
+  right: 2rem;
+  margin-top: 3.5rem;
+  color: var(--text-color-1);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.mode-toggle:hover {
+  color: var(--text-color-2);
+}
+
+.mode-toggle.fa-lightbulb-o {
+  right: 2.3rem;
+}
+
+.arrow {
+  position: fixed;
+  bottom: .5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: calc(50% - 1rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.arrow .fa {
+  font-size: 1rem;
+  color: var(--text-color-1) !important;
+}
+
+body.light-mode {
+  background-color: white !important;
+  --theme-color: black;
+  --text-color-2: black;
 }
 /*# sourceMappingURL=styles.css.map */
