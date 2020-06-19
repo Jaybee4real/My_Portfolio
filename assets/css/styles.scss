@@ -4,9 +4,9 @@
 :root {
   --theme-color: orange;
   --secondary-color: white;
-  --background-color: black;
+  --background-color: white;
   --text-color-1: orange;
-  --text-color-2: white;
+  --text-color-2: black;
 }
 
 html,
@@ -21,7 +21,6 @@ body {
   transition: 2s all ease-out;
   -webkit-transition-delay: -1s;
   transition-delay: -1s;
-  background-color: black;
 }
 
 * {
@@ -64,7 +63,7 @@ body {
   padding: 0;
   top: 100px;
   line-height: 1;
-  color: black;
+  color: orange;
   font-weight: 900;
 }
 
@@ -158,17 +157,16 @@ a {
 }
 
 body {
-  background-color: black;
   -webkit-animation: change-back 16s ease-in-out;
   animation: change-back 16s ease-in-out;
 }
 
 @keyframes change-back {
   0% {
-    background-color: white;
+    background-color: black;
   }
   100% {
-    background-color: black;
+    background-color: white;
   }
 }
 
@@ -197,6 +195,7 @@ body .scenejs-editor-timeline {
   padding: 0 0.5rem;
   border-radius: 20px;
   cursor: pointer;
+  color: white;
 }
 .skip:hover {
   background-color: var(--theme-color);
@@ -375,7 +374,7 @@ body .scenejs-editor-timeline {
 }
 
 body.light-mode {
-  background-color: white !important;
+  background-color: black !important;
   --theme-color: black;
-  --text-color-2: black;
+  --text-color-2: white;
 }

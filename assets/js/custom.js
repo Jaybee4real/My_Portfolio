@@ -140,11 +140,11 @@ window.addEventListener("load", () => {
 
 window.setTimeout(() => {
   document.querySelectorAll(".color-change-a").forEach((element) => {
-    element.style.color = "white";
+    element.style.color = "orange";
     element.style.transition = "1s all ease-out";
   });
   document.querySelectorAll(".color-change-p").forEach((element) => {
-    element.style.color = "orange";
+    element.style.color = "black";
     element.style.transition = "1s all ease-out";
   });
 }, 8500);
