@@ -251,13 +251,16 @@ body .scenejs-editor-timeline {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  border-bottom: 1px solid #eee;
+  padding-left: 5vw;
+  z-index: 100;
 }
 
 .navbar .logo {
   margin: 0.5rem 1rem;
   margin-right: 3rem;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-family: "Bellota", cursive;
   cursor: pointer;
 }
@@ -284,8 +287,31 @@ body .scenejs-editor-timeline {
   right: 2rem;
   margin: 5px 0;
   cursor: pointer;
+  z-index: 3;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+
+.mobile-nav-toggle.active {
+  background-color: transparent !important;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.mobile-nav-toggle.active::after {
+  -webkit-transform: translateY(0px) rotateZ(-45deg);
+          transform: translateY(0px) rotateZ(-45deg);
+  width: 100%;
+  opacity: 1;
+}
+
+.mobile-nav-toggle.active::before {
+  -webkit-transform: translateY(-1px) rotate(45deg);
+          transform: translateY(-1px) rotate(45deg);
+  width: 100%;
+  opacity: 1;
 }
 
 .mobile-nav-toggle:before {
@@ -364,6 +390,8 @@ body .scenejs-editor-timeline {
   color: var(--text-color-1);
   font-size: 1.3rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .mode-toggle:hover {
@@ -376,7 +404,7 @@ body .scenejs-editor-timeline {
 
 .arrow {
   position: fixed;
-  bottom: .5rem;
+  bottom: 0.5rem;
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
@@ -397,6 +425,52 @@ body .scenejs-editor-timeline {
 .arrow .fa {
   font-size: 1rem;
   color: var(--text-color-1) !important;
+}
+
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.708);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10%;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.mobile-menu .mobile-nav-item {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-color-1);
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in;
+}
+
+.mobile-menu .mobile-nav-item:hover {
+  color: var(--text-color-2);
+}
+
+.mobile-menu.active {
+  opacity: 1 !important;
+}
+
+.mobile-menu.active .mobile-nav-item {
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+  opacity: 1;
 }
 
 body.light-mode {

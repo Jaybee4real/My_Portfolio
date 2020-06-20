@@ -167,7 +167,7 @@ document.querySelector(".skip").addEventListener("click", () => {
       "translateY(-100vw)";
   document.querySelector(".wrapper-container").classList.add("finished");
   document.querySelector("body").style.animation = "none"
-  document.querySelector("body").style.backgroundColor = "black"
+  document.querySelector("body").style.backgroundColor = "white"
   document.querySelector(".main-content").classList.remove("hidden");
 
 

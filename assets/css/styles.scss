@@ -236,13 +236,16 @@ body .scenejs-editor-timeline {
   height: 3rem;
   align-items: center;
   position: fixed;
+  border-bottom: 1px solid #eee;
+  padding-left: 5vw;
+  z-index: 100;
 }
 
 .navbar .logo {
   margin: 0.5rem 1rem;
   margin-right: 3rem;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-family: "Bellota", cursive;
   cursor: pointer;
 }
@@ -268,7 +271,27 @@ body .scenejs-editor-timeline {
   right: 2rem;
   margin: 5px 0;
   cursor: pointer;
+  z-index: 3;
+  transform: rotate(180deg);
   transition: all 0.3s ease-out;
+}
+
+.mobile-nav-toggle.active {
+  background-color: transparent !important;
+  transform: rotate(0deg);
+
+
+  &::after {
+    transform: translateY(0px) rotateZ(-45deg);
+    width: 100%;
+    opacity: 1;
+  }
+
+  &::before {
+    transform: translateY(-1px) rotate(45deg);
+    width: 100%;
+    opacity: 1;
+  }
 }
 
 .mobile-nav-toggle:before {
@@ -344,6 +367,7 @@ body .scenejs-editor-timeline {
   color: var(--text-color-1);
   font-size: 1.3rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     color: var(--text-color-2);
@@ -356,7 +380,7 @@ body .scenejs-editor-timeline {
 
 .arrow {
   position: fixed;
-  bottom: .5rem;
+  bottom: 0.5rem;
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
@@ -368,10 +392,48 @@ body .scenejs-editor-timeline {
 
   .fa {
     font-size: 1rem;
-    color: var(--text-color-1) !important
+    color: var(--text-color-1) !important;
+  }
+}
+
+
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.708);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+  transition: all .6s ease-in-out;
+  opacity: 0;
+  will-change: opacity;
+
+  .mobile-nav-item {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color-1);
+    cursor: pointer;
+    opacity: 0;
+    transition: all .4s ease-in;
+    
+    &:hover {
+      color: var(--text-color-2);
+    }
   }
 
+  
 }
+
+.mobile-menu.active{
+  opacity: 1 !important;
+    .mobile-nav-item{
+      transition-delay: .1s;
+      opacity: 1;
+    }
+}
+
 
 body.light-mode {
   background-color: black !important;
