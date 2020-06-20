@@ -385,7 +385,7 @@ body .scenejs-editor-timeline {
 
 .mode-toggle {
   position: fixed;
-  right: 2rem;
+  right: 1.2rem;
   margin-top: 3.5rem;
   color: var(--text-color-1);
   font-size: 1.3rem;
@@ -399,7 +399,7 @@ body .scenejs-editor-timeline {
 }
 
 .mode-toggle.fa-lightbulb-o {
-  right: 2.3rem;
+  right: 1.4rem;
 }
 
 .arrow {
@@ -455,12 +455,28 @@ body .scenejs-editor-timeline {
   color: var(--text-color-1);
   cursor: pointer;
   opacity: 0;
-  -webkit-transition: all .4s ease-in;
-  transition: all .4s ease-in;
+  -webkit-transition: opacity .4s ease-in;
+  transition: opacity .4s ease-in;
 }
 
 .mobile-menu .mobile-nav-item:hover {
   color: var(--text-color-2);
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  -webkit-transition-delay: 0s !important;
+          transition-delay: 0s !important;
+}
+
+@media (max-width: 560px) {
+  .animate {
+    display: none;
+  }
+  .mode-toggle, .mobile-nav-toggle {
+    right: .6rem;
+  }
+  .mobile-menu {
+    padding-top: 20%;
+  }
 }
 
 .mobile-menu.active {
@@ -473,7 +489,7 @@ body .scenejs-editor-timeline {
   opacity: 1;
 }
 
-body.light-mode {
+body.dark-mode {
   background-color: black !important;
   --theme-color: black;
   --text-color-2: white;

@@ -1,5 +1,5 @@
 document.querySelector(".mode-toggle").addEventListener("click" ,() => {
-    document.querySelector('body').classList.toggle("light-mode")
+    document.querySelector('body').classList.toggle("dark-mode")
     document.querySelector(".mode-toggle").classList.toggle("fa-lightbulb-o")
 })
 

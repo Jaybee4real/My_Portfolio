@@ -153,7 +153,7 @@ window.setTimeout(() => {
   scene.play();
   document.querySelector(".wrapper-container").classList.remove("hidden");
   document.querySelector(".preloader-container").style.transform =
-    "translateX(-100vw)";
+    "translateX(-110vw)";
   document.querySelector(".preloader-container").classList.add("finished");
 }, 2000);
 
@@ -162,13 +162,15 @@ window.setTimeout(() => {
 
 ///////////////Skip Button//////////
 document.querySelector(".skip").addEventListener("click", () => {
-  scene.end();
     document.querySelector(".wrapper-container").style.transform =
-      "translateY(-100vw)";
+      "translateY(-110vw)";
   document.querySelector(".wrapper-container").classList.add("finished");
   document.querySelector("body").style.animation = "none"
   document.querySelector("body").style.backgroundColor = "white"
   document.querySelector(".main-content").classList.remove("hidden");
+  setTimeout(() => {
+    document.querySelector(".wrapper-container").style.opacity = 0
+  }, 1000)
 
 
 })
@@ -177,7 +179,7 @@ document.querySelector(".skip").addEventListener("click", () => {
 
 window.setTimeout(() => {
   document.querySelector(".wrapper-container").style.transform =
-    "translateY(-100vw)";
+    "translateY(-110vw)";
   document.querySelector(".wrapper-container").classList.add("finished");
   document.querySelector(".main-content").classList.remove("hidden");
 }, 20000);
@@ -187,6 +189,6 @@ document.addEventListener("scroll", function (e) {
   if (offset > 1) {
     document.querySelector(".arrow").style.marginLeft = "90%";
   } else {
-    document.querySelector(".arrow").style.marginLeft = "calc(50% - 40px)";
+    document.querySelector(".arrow").style.marginLeft = "calc(50% - 1rem)";
   }
 });
