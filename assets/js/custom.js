@@ -174,8 +174,8 @@ document.querySelector(".skip").addEventListener("click", () => {
 
 
 })
-// ////////////////////////////
 
+// /////////////////////////////////// //
 
 window.setTimeout(() => {
   document.querySelector(".wrapper-container").style.transform =
