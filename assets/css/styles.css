@@ -599,10 +599,10 @@ body.dark-mode .navbar {
 }
 
 .section-one .introduction .name {
-  font-size: 2.3rem;
+  font-size: 2rem;
   margin-top: -.8rem;
   margin-bottom: 0;
-  line-height: 1;
+  line-height: 1 !important;
   color: var(--text-color-2);
 }
 
@@ -610,6 +610,7 @@ body.dark-mode .navbar {
   font-size: 1rem;
   color: var(--text-color-1);
   font-weight: 300;
+  line-height: 1;
 }
 
 .section-one .introduction p {
@@ -622,6 +623,49 @@ body.dark-mode .navbar {
 .section-one .introduction .profession-heading {
   font-size: .8rem;
   padding-right: 35%;
+  margin-top: .5rem;
   color: var(--text-color-2);
+}
+
+.links {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.links a {
+  color: var(--text-color-2);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: .6rem;
+  margin: 0 .7rem;
+  margin-top: .5rem;
+}
+
+.links a:first-of-type {
+  margin-left: 0;
+}
+
+.links .fa {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.links a:hover {
+  color: var(--text-color-1);
 }
 /*# sourceMappingURL=styles.css.map */

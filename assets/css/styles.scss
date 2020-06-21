@@ -518,10 +518,10 @@ body.dark-mode {
   .introduction{
 
     .name{
-      font-size: 2.3rem;
+      font-size: 2rem;
       margin-top: -.8rem;
       margin-bottom: 0;
-      line-height: 1;
+      line-height: 1 !important;
       color: var(--text-color-2);
 
 
@@ -529,6 +529,7 @@ body.dark-mode {
         font-size: 1rem;
         color: var(--text-color-1);
         font-weight: 300;
+        line-height: 1;
       }
     }
 
@@ -545,7 +546,39 @@ body.dark-mode {
     .profession-heading{
       font-size: .8rem;
       padding-right: 35%;
+      margin-top: .5rem;
       color: var(--text-color-2);
     }
+  }
+}
+
+.links{
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+
+  a{
+    color: var(--text-color-2);
+    transition: all .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    font-size: .6rem;
+    margin: 0 .7rem ;
+    margin-top: .5rem;
+
+    &:first-of-type{
+      margin-left: 0;
+    }
+  }
+
+
+
+  .fa{
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  a:hover{
+    color: var(--text-color-1);
   }
 }
