@@ -265,16 +265,28 @@ body .scenejs-editor-timeline {
   cursor: pointer;
 }
 
+.navbar .logo .fa {
+  font-size: 1.2rem;
+  position: relative;
+  top: .1rem;
+  color: var(--text-color-2);
+}
+
 .navbar .nav-item {
-  color: var(--text-color-1) !important;
+  color: var(--text-color-1);
   margin: 0.5rem 1rem;
   font-weight: 300 !important;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-size: .9rem;
 }
 
 .navbar .nav-item.active {
+  color: var(--text-color-2) !important;
+}
+
+.nav-item:hover {
   color: var(--text-color-2) !important;
 }
 
@@ -367,10 +379,6 @@ body .scenejs-editor-timeline {
   width: 100%;
 }
 
-.navbar .nav-item:hover {
-  color: var(--text-color-1) !important;
-}
-
 @media (max-width: 1080px) {
   .navbar .nav-item {
     margin: 0.5rem 0.5rem;
@@ -431,7 +439,7 @@ body .scenejs-editor-timeline {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.708);
+  background-color: rgba(0, 0, 0, 0.808);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -469,9 +477,15 @@ body .scenejs-editor-timeline {
 }
 
 @media (max-width: 560px) {
+  .profession-heading {
+    padding-right: 0 !important;
+  }
+  .mobile-nav-item {
+    font-size: 1.6rem;
+  }
   .mode-toggle,
   .mobile-nav-toggle {
-    right: 0.6rem;
+    right: 0.6rem !important;
   }
   .mobile-menu {
     padding-top: 20%;
@@ -497,5 +511,117 @@ body.dark-mode {
 
 body.dark-mode .navbar {
   border-bottom: none;
+}
+
+.hand {
+  -webkit-animation-name: wave-animation;
+          animation-name: wave-animation;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform-origin: 70% 70%;
+          transform-origin: 70% 70%;
+  will-change: transform;
+  display: inline-block;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+@keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  20% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  30% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  40% {
+    -webkit-transform: rotate(9deg);
+            transform: rotate(9deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  20% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  30% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  40% {
+    -webkit-transform: rotate(9deg);
+            transform: rotate(9deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.middle {
+  margin: auto 3rem;
+}
+
+.section-one {
+  margin-top: 7rem;
+}
+
+.section-one .introduction .name {
+  font-size: 2.3rem;
+  margin-top: -.8rem;
+  margin-bottom: 0;
+  line-height: 1;
+  color: var(--text-color-2);
+}
+
+.section-one .introduction .name .aka {
+  font-size: 1rem;
+  color: var(--text-color-1);
+  font-weight: 300;
+}
+
+.section-one .introduction p {
+  font-size: 1.2rem;
+  color: var(--text-color-1);
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.section-one .introduction .profession-heading {
+  font-size: .8rem;
+  padding-right: 35%;
+  color: var(--text-color-2);
 }
 /*# sourceMappingURL=styles.css.map */
