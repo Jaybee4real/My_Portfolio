@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
       "translateY(-110vw)";
     document.querySelector(".wrapper-container").classList.add("finished");
     document.querySelector("body").style.animation = "none";
-    document.querySelector("body").style.backgroundColor = "white";
+    document.querySelector("body").style.backgroundColor = "var(--background-color)";
     document.querySelector(".main-content").classList.remove("hidden");
     setTimeout(() => {
       document.querySelector(".wrapper-container").style.opacity = 0;

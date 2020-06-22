@@ -121,6 +121,25 @@ scene.set({
   },
 });
 
+
 scene.setPlaySpeed(0.9);
 scene.setEasing("ease-in-out");
 scene.setIterationCount(1);
+
+
+const effect = new Scene(
+  {
+    ".container": {},
+  },
+  {
+    selector: true,
+  }
+);
+
+effect.set({
+  ".proffession-heading": {
+    12: Scene.typing({ text: "And More...", duration: 1 }),
+  },
+})
+
+effect.start()
