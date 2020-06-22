@@ -231,12 +231,11 @@ body .scenejs-editor-timeline {
 
 /* //////////////////////////Preloaders End////////////////////////// */
 
-
-@keyframes fade-in{
-  0%{
+@keyframes fade-in {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
@@ -257,6 +256,7 @@ body .scenejs-editor-timeline {
   border-bottom: 1px solid #eee;
   padding-left: 5vw;
   z-index: 100;
+  background-color: var(--background-color);
 }
 
 .navbar .logo {
@@ -479,7 +479,6 @@ body .scenejs-editor-timeline {
 
 body.dark-mode {
   background-color: #292929 !important;
-  --theme-color: #292929;
   --text-color-2: white;
 
   .navbar {
@@ -498,6 +497,9 @@ body.dark-mode {
   display: inline-block;
   cursor: grab;
 }
+
+
+
 
 @keyframes wave-animation {
   0% {
@@ -551,11 +553,45 @@ body.dark-mode {
   margin: auto 3rem;
 }
 
-
-
 .section-one {
   margin-top: 7rem;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+
+  .picture-container {
+    position: relative;
+  }
+
+  .picture-inner {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    border: 10px solid var(--theme-color);
+    top: -5%;
+    z-index: -1;
+    animation: spin 17s linear infinite;
+  }
+
+  .picture {
+    position: relative;
+    top: -100px;
+    left: -50px;
+    width: 740px;
+    height: 600px;
+    background-image: url(../img/me.jpg);
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    background-size: cover;
+    -webkit-clip-path: polygon(28% 0, 100% 25%, 61% 100%, 0 93%);
+    clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
+  }
+
   .introduction {
+    width: 40%;
+    left: -25px;
+    padding-right: 5%;
+    position: relative;
     .name {
       font-size: 2rem;
       margin-top: -0.8rem;
@@ -580,14 +616,30 @@ body.dark-mode {
 
     .profession-heading {
       font-size: 0.8rem;
-      padding-right: 35%;
       margin-top: 0.5rem;
       color: var(--text-color-2);
     }
   }
 }
 
-.heading-vector{
+@media (max-width: 790px) {
+  .section-one {
+    flex-direction: column;
+  }
+
+  .introduction {
+    width: 100% !important;
+    padding-right: 10% !important;
+  }
+}
+@media (max-width: 560px) {
+  .picture {
+    width: 100% !important;
+    -webkit-clip-path: polygon(28% 0, 100% 25%, 71% 100%, 0 93%) !important;
+    clip-path: polygon(28% 0, 100% 25%, 71% 100%, 0 93%) !important;
+  }
+}
+.heading-vector {
   height: 100%;
   width: 12rem;
   background-color: yellow;
@@ -621,3 +673,4 @@ body.dark-mode {
     color: var(--text-color-1);
   }
 }
+///////////////Header Customization///////////
