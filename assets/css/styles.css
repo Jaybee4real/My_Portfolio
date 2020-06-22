@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,900;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap");
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 :root {
   --theme-color: orange;
   --secondary-color: white;
@@ -231,9 +240,28 @@ body .scenejs-editor-timeline {
 }
 
 /* //////////////////////////Preloaders End////////////////////////// */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-content {
   position: absolute;
   width: 100vw;
+  -webkit-animation: fade-in 1.2s ease-in-out;
+          animation: fade-in 1.2s ease-in-out;
 }
 
 .navbar {
@@ -268,7 +296,7 @@ body .scenejs-editor-timeline {
 .navbar .logo .fa {
   font-size: 1.2rem;
   position: relative;
-  top: .1rem;
+  top: 0.1rem;
   color: var(--text-color-2);
 }
 
@@ -279,7 +307,7 @@ body .scenejs-editor-timeline {
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .navbar .nav-item.active {
@@ -504,8 +532,8 @@ body .scenejs-editor-timeline {
 }
 
 body.dark-mode {
-  background-color: black !important;
-  --theme-color: black;
+  background-color: #292929 !important;
+  --theme-color: #292929;
   --text-color-2: white;
 }
 
@@ -516,8 +544,8 @@ body.dark-mode .navbar {
 .hand {
   -webkit-animation-name: wave-animation;
           animation-name: wave-animation;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-transform-origin: 70% 70%;
@@ -600,7 +628,7 @@ body.dark-mode .navbar {
 
 .section-one .introduction .name {
   font-size: 2rem;
-  margin-top: -.8rem;
+  margin-top: -0.8rem;
   margin-bottom: 0;
   line-height: 1 !important;
   color: var(--text-color-2);
@@ -617,14 +645,20 @@ body.dark-mode .navbar {
   font-size: 1.2rem;
   color: var(--text-color-1);
   font-weight: 500;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .section-one .introduction .profession-heading {
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding-right: 35%;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   color: var(--text-color-2);
+}
+
+.heading-vector {
+  height: 100%;
+  width: 12rem;
+  background-color: yellow;
 }
 
 .links {
@@ -642,8 +676,8 @@ body.dark-mode .navbar {
 
 .links a {
   color: var(--text-color-2);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -651,9 +685,9 @@ body.dark-mode .navbar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: .6rem;
-  margin: 0 .7rem;
-  margin-top: .5rem;
+  font-size: 0.6rem;
+  margin: 0 0.7rem;
+  margin-top: 0.5rem;
 }
 
 .links a:first-of-type {
