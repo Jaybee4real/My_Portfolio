@@ -67,8 +67,11 @@
 .main-content {
   position: absolute;
   width: 100vw;
+  background-color: var(--background-color);
   -webkit-animation: fade-in 1.2s ease-in-out;
           animation: fade-in 1.2s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .navbar {
@@ -459,7 +462,7 @@ body.dark-mode .navbar {
   height: 90%;
   border: 7px solid var(--theme-color);
   top: -5%;
-  z-index: -1;
+  z-index: 1;
   -webkit-animation: spin 20s linear infinite;
           animation: spin 20s linear infinite;
   border-radius: 10px;
@@ -471,6 +474,7 @@ body.dark-mode .navbar {
   left: -50px;
   width: 740px;
   height: 600px;
+  z-index: 2;
   background-image: url(../img/me.jpg);
   background-repeat: no-repeat;
   background-position: center 20px;
@@ -617,8 +621,27 @@ body.dark-mode .navbar {
           flex: 3;
   margin-top: 1rem;
   padding: 0 8%;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-color-2);
+}
+
+.split-section .right-side .buttons {
+  margin-top: 1rem;
+}
+
+.split-section .right-side .buttons a {
+  width: 10rem;
+  padding: 0.5rem;
+  background-color: var(--text-color-2);
+  color: var(--background-color);
+  margin-right: 0.5rem;
+  border-radius: 2px;
+  -webkit-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.split-section .right-side .buttons a:hover {
+  background-color: var(--theme-color);
 }
 
 @media (max-width: 640px) {
@@ -634,5 +657,42 @@ body.dark-mode .navbar {
   .split-section .left-side .dissapear-560 {
     display: none;
   }
+}
+
+.progress-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.progress .progress-value {
+  width: 200px;
+  height: 14px;
+  margin-top: 0.6rem;
+  position: relative;
+  background-color: var(--text-color-2);
+}
+
+.progress .progress-value::after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  background-color: var(--theme-color);
+}
+
+.progress .progress-value.two::after {
+  width: 75% !important;
+}
+
+.progress .progress-value.three::after {
+  width: 65% !important;
 }
 /*# sourceMappingURL=styles.css.map */

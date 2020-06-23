@@ -32,6 +32,25 @@ window.addEventListener("load", () => {
     });
   }, 7500);
 
+  //////////////////////////////////////////////////////////////////////////
+  ///////////////////////////Typing Animation////////////////////////////////
+
+  const type = (element) => {
+    var x = 0;
+    text = element.innerHTML;
+    element.innerHTML = "";
+    function animate() {
+      if (x < text.length) {
+        element.innerHTML += text.charAt(x);
+        x++;
+
+        setTimeout(animate, 30);
+      }
+    }
+
+    animate();
+  };
+
   ///////////////Skip Button Press Action//////////
 
   document.querySelector(".skip").addEventListener("click", () => {
@@ -45,6 +64,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       document.querySelector(".wrapper-container").style.opacity = 0;
     }, 1000);
+    type(document.querySelector(".profession-heading"));
   });
 
   ////////////////////Kinetic Typing Animation Finished Action///////////////// //
@@ -54,11 +74,9 @@ window.addEventListener("load", () => {
       "translateY(-110vw)";
     document.querySelector(".wrapper-container").classList.add("finished");
     document.querySelector(".main-content").classList.remove("hidden");
+    type(document.querySelector(".profession-heading"));
   }, 18000);
-
- 
 });
-
 
 ////////////////////////Light Mode/Dark Mode Action///////////////
 
@@ -72,8 +90,6 @@ document.querySelector(".mobile-nav-toggle").addEventListener("click", () => {
   document.querySelector(".mobile-menu").classList.toggle("active");
   document.querySelector(".navbar").classList.toggle("transparent");
 });
-
-
 
 ////////////////////////Add Classes Based on Visibility/////////////////
 
@@ -96,25 +112,3 @@ let reveal = new IntersectionObserver((entries) => {
 revealElements.forEach((element) => {
   reveal.observe(element);
 });
-
-//////////////////////////////////////////////////////////////////////////
-///////////////////////////Typing Animation////////////////////////////////
-
-
-const type = (element => {
-  var x = 0
-  text = element.innerHTML
-  element.innerHTML = ''
-  function animate() {
-    if (x < text.length) {
-      element.innerHTML += text.charAt(x);
-      x++
-
-      setTimeout(animate, 30)
-    }
-  }
-
-  animate()
-})
-
-type(document.querySelector(".profession-heading"))

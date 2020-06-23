@@ -175,10 +175,10 @@ a {
 
 @keyframes change-back {
   0% {
-    background-color: black;
+    background-color: var(--text-color-2);
   }
   100% {
-    background-color: white;
+    background-color: var(--background-color);
   }
 }
 
