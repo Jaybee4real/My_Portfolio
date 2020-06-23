@@ -39,7 +39,8 @@ window.addEventListener("load", () => {
       "translateY(-110vw)";
     document.querySelector(".wrapper-container").classList.add("finished");
     document.querySelector("body").style.animation = "none";
-    document.querySelector("body").style.backgroundColor = "var(--background-color)";
+    document.querySelector("body").style.backgroundColor =
+      "var(--background-color)";
     document.querySelector(".main-content").classList.remove("hidden");
     setTimeout(() => {
       document.querySelector(".wrapper-container").style.opacity = 0;
@@ -53,19 +54,11 @@ window.addEventListener("load", () => {
       "translateY(-110vw)";
     document.querySelector(".wrapper-container").classList.add("finished");
     document.querySelector(".main-content").classList.remove("hidden");
-  }, 20000);
+  }, 18000);
 
-  /////////////////////////Scroll Down Arrow Scroll Action ///////////
-
-  document.addEventListener("scroll", function (e) {
-    var offset = window.pageYOffset;
-    if (offset > 1) {
-      document.querySelector(".arrow").style.marginLeft = "90%";
-    } else {
-      document.querySelector(".arrow").style.marginLeft = "calc(50% - 1rem)";
-    }
-  });
+ 
 });
+
 
 ////////////////////////Light Mode/Dark Mode Action///////////////
 
@@ -77,4 +70,51 @@ document.querySelector(".mode-toggle").addEventListener("click", () => {
 document.querySelector(".mobile-nav-toggle").addEventListener("click", () => {
   document.querySelector(".mobile-nav-toggle").classList.toggle("active");
   document.querySelector(".mobile-menu").classList.toggle("active");
+  document.querySelector(".navbar").classList.toggle("transparent");
 });
+
+
+
+////////////////////////Add Classes Based on Visibility/////////////////
+
+let options = {
+  rootMargin: "200px",
+};
+
+let revealElements = document.querySelectorAll(".text-reveal-trigger");
+
+let reveal = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add("reveal-text");
+    } else {
+      entry.target.classList.remove("reveal-text");
+    }
+  });
+}, options);
+
+revealElements.forEach((element) => {
+  reveal.observe(element);
+});
+
+//////////////////////////////////////////////////////////////////////////
+///////////////////////////Typing Animation////////////////////////////////
+
+
+const type = (element => {
+  var x = 0
+  text = element.innerHTML
+  element.innerHTML = ''
+  function animate() {
+    if (x < text.length) {
+      element.innerHTML += text.charAt(x);
+      x++
+
+      setTimeout(animate, 30)
+    }
+  }
+
+  animate()
+})
+
+type(document.querySelector(".profession-heading"))

@@ -40,14 +40,7 @@
       req.send();
     }
 
-    // var a = document.createElement("a");
-    // a.setAttribute("href", "#");
-    // a.style.cssText =
-    //   "position: fixed; margin-left: calc(50% - 40px); bottom: 10px;width: 40px;height: 40px;line-height: 40px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 0px;box-sizing: border-box;text-align: center; text-decoration: none; color: black; font-weight: bold; font-family: sans-serif;font-size: 20px;";
-    // a.innerHTML = "<i class='fa fa-arrow-down'></i>";
-    // a.classList.add("arrow");
 
-    // document.querySelector(".main-content").appendChild(a);
 
     ga("pageview", "");
   } catch (e) {}
