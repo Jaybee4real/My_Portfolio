@@ -236,6 +236,7 @@
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  z-index: 3;
 }
 
 .mode-toggle:hover {
@@ -626,6 +627,12 @@ body.dark-mode .navbar {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .split-section .left-side {
+    margin-bottom: -1rem;
+  }
+  .split-section .left-side .dissapear-560 {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */
