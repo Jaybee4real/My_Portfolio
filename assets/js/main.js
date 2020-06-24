@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
     document.querySelector(".animate").style.color = "white";
     document.querySelector(".animate").innerHTML =
       "Loaded <i style='margin-left: .7rem' class='fa fa-arrow-right'></>";
-  }, 500);
+  }, 700);
 
   ////////////////Start Kinetic Typing///////////
 
@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
     document.querySelector(".preloader-container").style.transform =
       "translateX(-110vw)";
     document.querySelector(".preloader-container").classList.add("finished");
-  }, 1000);
+  }, 1200);
 
   /////////////////////Background-color Animation//////////////
 

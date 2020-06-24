@@ -11,6 +11,7 @@
   position: fixed;
 }
 
+
 .skip {
   position: fixed;
   top: 1rem;
@@ -396,6 +397,40 @@ body.dark-mode {
     border-radius: 10px;
   }
 
+  .picture-inner-two {
+    position: absolute;
+    width: 28rem;
+    height: 28rem;
+    top: -5%;
+    z-index: 1;
+    border-radius: 10px;
+    animation-delay: 1.5s;
+    border-radius: 50%;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 80%;
+      width: 80%;
+      border-radius: 50%;
+      animation: spin 3s linear infinite;
+      border: 7px solid transparent;
+      border-top-color: var(--text-color-2);
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      animation: spin 3s reverse infinite;
+      border: 7px solid transparent;
+      border-top-color: var(--theme-color);
+      animation-delay: 0.7s;
+    }
+  }
+
   .picture {
     position: relative;
     top: -100px;
@@ -598,13 +633,16 @@ body.dark-mode {
   }
 }
 
-.technologies-section {
-  .skills-section {
+.technologies-section,
+.frameworks-section {
+  .skills-section,
+  .tools-section {
     display: flex;
     flex-wrap: wrap;
   }
+
   .skill {
-    height: 7rem;
+    height: 5rem;
     width: 7rem;
     justify-content: center;
     display: flex;
@@ -614,13 +652,14 @@ body.dark-mode {
 
     .skill-name {
       color: var(--text-color-2);
-      font-size: 1.1rem;
+      font-size: .9rem;
+      margin-top: 1rem
     }
 
     .skill-icon {
       position: relative;
-      height: 5rem;
-      width: 5rem;
+      height: 4rem;
+      width: 4rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -628,17 +667,14 @@ body.dark-mode {
       border-radius: 50%;
       margin-bottom: 0.5rem;
       .fab {
-        font-size: 3rem;
-        color: skyblue;
-        -webkit-animation: spin 10s linear infinite;
-        animation: spin 10s linear infinite;
+        font-size: 2rem;
       }
 
       &::after {
         content: "";
         position: absolute;
-        height: 120%;
-        width: 120%;
+        height: 4.5rem;
+        width: 4.5rem;
         border-radius: 50%;
         border-radius: 50%;
         border: 2.4px solid transparent;
@@ -650,9 +686,8 @@ body.dark-mode {
       &::before {
         content: "";
         position: absolute;
-        height: 110%;
-        width: 110%;
-        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
         border-radius: 50%;
         border: 2.4px solid transparent;
         border-top-color: var(--text-color-2);
@@ -661,4 +696,161 @@ body.dark-mode {
       }
     }
   }
+}
+
+.css::after,
+.css::before {
+  animation-delay: 0.4s !important;
+}
+
+.js::after,
+.js::before {
+  animation-delay: 0.8s !important;
+}
+
+.css::after,
+.css::before {
+  animation-delay: 1.2s !important;
+}
+
+.python::after,
+.python::before {
+  animation-delay: 1.6s !important;
+}
+
+.ruby::after,
+.ruby::before {
+  animation-delay: 2s !important;
+}
+
+.react::after,
+.react::before {
+  animation-delay: 2.4s !important;
+}
+
+.rn::after,
+.rn::before {
+  animation-delay: 2s !important;
+}
+
+.django {
+  img {
+    height: 65px;
+    width: 65px;
+    -webkit-animation: rotate-3d 4s linear infinite;
+    animation: rotate-3d 4s linear infinite;
+  }
+}
+.fa-html5 {
+  color: #e34c26;
+  -webkit-animation: rotate-3d 4s linear infinite;
+  animation: rotate-3d 4s linear infinite;
+}
+
+.fa-css3 {
+  color: #2965f1;
+  -webkit-animation: rotate-3d 4s linear infinite;
+  animation: rotate-3d 4s linear infinite;
+}
+ .fa-sass{
+   color: rgb(253, 103, 128);
+  -webkit-animation: rotate-3d 4s linear infinite;
+  animation: rotate-3d 4s linear infinite;
+ }
+.fa-js {
+  color: #f0db4f;
+  -webkit-animation: rotate-3d 4s linear infinite;
+  animation: rotate-3d 4s linear infinite;
+}
+
+.fa-git-alt{
+  color: #F1502F;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+.fa-python {
+  background: -webkit-linear-gradient(
+    -137deg,
+    #f0db4f 43%,
+    var(--text-color-2) 55%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: rotate-3d 4s linear infinite;
+  animation: rotate-3d 4s linear infinite;
+}
+
+.fa-gem {
+  font-size: 2rem;
+  color: #a91401;
+  -webkit-animation: rotate-3d 1.7s linear infinite;
+  animation: rotate-3d 1.7s linear infinite;
+}
+
+.dart{
+  background-image: url(../img/dart-logo.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+.fa-vial {
+  font-size: 2rem;
+  background: -webkit-linear-gradient(
+    90deg,
+    #a91401 43%,
+    var(--text-color-2) 55%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: rotate-3d 4s linear infinite;
+  animation: rotate-3d 4s linear infinite;
+}
+
+.fa-react {
+  color: #00b7ff;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+.unity {
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+  svg {
+    // transform: scale(0.7) translateY(1.5rem);
+  }
+}
+
+.react-native {
+  color: #00b7ff;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+@media (max-width: 560px) {
+  .skills-section, .tools-section {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes rotate-3d {
+  0% {
+    transform: rotate3d(0);
+  }
+
+  50% {
+    transform: rotate3d(0, 1, 0, 3.142rad);
+  }
+
+  100% {
+    transform: rotate3d(0);
+  }
+}
+
+/////////////Frameworks Section/////////
+
+.frameworks-section {
 }
