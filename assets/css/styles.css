@@ -341,7 +341,7 @@
 
 .mobile-menu.active {
   opacity: 1 !important;
-  z-index: 1;
+  z-index: 3;
 }
 
 .mobile-menu.active .mobile-nav-item {
@@ -573,7 +573,14 @@ body.dark-mode .navbar {
     width: 100% !important;
     -webkit-clip-path: polygon(28% 0, 100% 25%, 71% 100%, 0 93%) !important;
     clip-path: polygon(28% 0, 100% 25%, 71% 100%, 0 93%) !important;
-    height: 80%;
+    height: 500px !important;
+    margin-top: 25px;
+  }
+  .picture-inner-two::before {
+    margin-left: -5%;
+  }
+  .picture-inner-two::after {
+    margin-left: -12%;
   }
 }
 
@@ -780,7 +787,7 @@ body.dark-mode .navbar {
 .technologies-section .skill .skill-name,
 .frameworks-section .skill .skill-name {
   color: var(--text-color-2);
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-top: 1rem;
 }
 
@@ -907,10 +914,29 @@ body.dark-mode .navbar {
   animation: rotate-3d 4s linear infinite;
 }
 
-.fa-git-alt {
-  color: #F1502F;
+.flutter {
+  background-image: url(../img/flutter.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
+}
+
+.fa-bootstrap {
+  color: darkblue;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+.fa-git-alt {
+  color: #f1502f;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+.fa-react.rn {
+  -webkit-animation: spin 10s reverse infinite;
+  animation: spin 10s reverse infinite;
 }
 
 .fa-python {
@@ -963,13 +989,16 @@ body.dark-mode .navbar {
 }
 
 @media (max-width: 560px) {
-  .skills-section, .tools-section {
+  .skills-section,
+  .tools-section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100vw;
+    margin-left: -1.2rem;
   }
 }
 

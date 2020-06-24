@@ -11,7 +11,6 @@
   position: fixed;
 }
 
-
 .skip {
   position: fixed;
   top: 1rem;
@@ -296,7 +295,7 @@
 
 .mobile-menu.active {
   opacity: 1 !important;
-  z-index: 1;
+  z-index: 3;
   .mobile-nav-item {
     transition-delay: 0.1s;
     opacity: 1;
@@ -497,7 +496,15 @@ body.dark-mode {
     width: 100% !important;
     -webkit-clip-path: polygon(28% 0, 100% 25%, 71% 100%, 0 93%) !important;
     clip-path: polygon(28% 0, 100% 25%, 71% 100%, 0 93%) !important;
-    height: 80%;
+    height: 500px !important;
+    margin-top: 25px;
+  }
+
+  .picture-inner-two::before {
+    margin-left: -5%;
+  }
+  .picture-inner-two::after {
+    margin-left: -12%;
   }
 }
 
@@ -586,7 +593,9 @@ body.dark-mode {
       .dissapear-560 {
         display: none;
       }
+      
     }
+
   }
 }
 
@@ -652,8 +661,8 @@ body.dark-mode {
 
     .skill-name {
       color: var(--text-color-2);
-      font-size: .9rem;
-      margin-top: 1rem
+      font-size: 0.9rem;
+      margin-top: 1rem;
     }
 
     .skill-icon {
@@ -752,21 +761,39 @@ body.dark-mode {
   -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
 }
- .fa-sass{
-   color: rgb(253, 103, 128);
+.fa-sass {
+  color: rgb(253, 103, 128);
   -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
- }
+}
 .fa-js {
   color: #f0db4f;
   -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
 }
 
-.fa-git-alt{
-  color: #F1502F;
+.flutter {
+  background-image: url(../img/flutter.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
+}
+
+.fa-bootstrap {
+  color: darkblue;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+.fa-git-alt {
+  color: #f1502f;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+.fa-react.rn {
+  -webkit-animation: spin 10s reverse infinite;
+  animation: spin 10s reverse infinite;
 }
 
 .fa-python {
@@ -788,7 +815,7 @@ body.dark-mode {
   animation: rotate-3d 1.7s linear infinite;
 }
 
-.dart{
+.dart {
   background-image: url(../img/dart-logo.svg);
   background-position: right;
   background-repeat: no-repeat;
@@ -830,9 +857,12 @@ body.dark-mode {
 }
 
 @media (max-width: 560px) {
-  .skills-section, .tools-section {
+  .skills-section,
+  .tools-section {
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    margin-left: -1.2rem;
   }
 }
 
