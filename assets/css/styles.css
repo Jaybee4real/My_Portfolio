@@ -359,6 +359,10 @@ body.dark-mode .navbar {
   border-bottom: none;
 }
 
+body.dark-mode .fa-bootstrap {
+  color: skyblue;
+}
+
 .hand {
   -webkit-animation-name: wave-animation;
           animation-name: wave-animation;
@@ -980,6 +984,10 @@ body.dark-mode .navbar {
 .unity {
   -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
+}
+
+.unity svg path {
+  fill: var(--text-color-2) !important;
 }
 
 .react-native {

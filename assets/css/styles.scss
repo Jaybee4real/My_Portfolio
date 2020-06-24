@@ -309,6 +309,10 @@ body.dark-mode {
   .navbar {
     border-bottom: none;
   }
+
+  .fa-bootstrap{
+    color: skyblue;
+  }
 }
 
 ////////////////////////Content Start///////////////////@extend
@@ -593,9 +597,7 @@ body.dark-mode {
       .dissapear-560 {
         display: none;
       }
-      
     }
-
   }
 }
 
@@ -846,7 +848,9 @@ body.dark-mode {
   -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
   svg {
-    // transform: scale(0.7) translateY(1.5rem);
+    path {
+      fill: var(--text-color-2) !important;
+    }
   }
 }
 
@@ -881,6 +885,3 @@ body.dark-mode {
 }
 
 /////////////Frameworks Section/////////
-
-.frameworks-section {
-}
