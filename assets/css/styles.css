@@ -670,6 +670,7 @@ body.dark-mode .navbar {
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 3rem;
 }
 
 .progress .progress-value {
@@ -694,5 +695,99 @@ body.dark-mode .navbar {
 
 .progress .progress-value.three::after {
   width: 65% !important;
+}
+
+@media (max-width: 998px) {
+  .progress-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .progress-section .progress-value {
+    width: 100%;
+  }
+}
+
+.technologies-section .skills-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.technologies-section .skill {
+  height: 7rem;
+  width: 7rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem;
+}
+
+.technologies-section .skill .skill-name {
+  color: var(--text-color-2);
+  font-size: 1.1rem;
+}
+
+.technologies-section .skill .skill-icon {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.technologies-section .skill .skill-icon .fab {
+  font-size: 3rem;
+  color: skyblue;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+.technologies-section .skill .skill-icon::after {
+  content: "";
+  position: absolute;
+  height: 120%;
+  width: 120%;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 2.4px solid transparent;
+  border-top-color: orange;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+.technologies-section .skill .skill-icon::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 110%;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 2.4px solid transparent;
+  border-top-color: var(--text-color-2);
+  -webkit-animation: spin 3s reverse infinite;
+  animation: spin 3s reverse infinite;
 }
 /*# sourceMappingURL=styles.css.map */

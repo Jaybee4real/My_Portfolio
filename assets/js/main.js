@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
         element.innerHTML += text.charAt(x);
         x++;
 
-        setTimeout(animate, 30);
+        setTimeout(animate, 25);
       }
     }
 

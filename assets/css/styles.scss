@@ -562,6 +562,7 @@ body.dark-mode {
   flex-direction: row;
   width: 100%;
   justify-content: space-around;
+  margin-bottom: 3rem;
 }
 .progress {
   .progress-value {
@@ -581,8 +582,83 @@ body.dark-mode {
       width: 75% !important;
     }
 
-    &.three::after{
+    &.three::after {
       width: 65% !important;
+    }
+  }
+}
+
+@media (max-width: 998px) {
+  .progress-section {
+    flex-direction: column;
+
+    .progress-value {
+      width: 100%;
+    }
+  }
+}
+
+.technologies-section {
+  .skills-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .skill {
+    height: 7rem;
+    width: 7rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+
+    .skill-name {
+      color: var(--text-color-2);
+      font-size: 1.1rem;
+    }
+
+    .skill-icon {
+      position: relative;
+      height: 5rem;
+      width: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // background-color: grey;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+      .fab {
+        font-size: 3rem;
+        color: skyblue;
+        -webkit-animation: spin 10s linear infinite;
+        animation: spin 10s linear infinite;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 120%;
+        width: 120%;
+        border-radius: 50%;
+        border-radius: 50%;
+        border: 2.4px solid transparent;
+        border-top-color: orange;
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 110%;
+        width: 110%;
+        border-radius: 50%;
+        border-radius: 50%;
+        border: 2.4px solid transparent;
+        border-top-color: var(--text-color-2);
+        -webkit-animation: spin 3s reverse infinite;
+        animation: spin 3s reverse infinite;
+      }
     }
   }
 }

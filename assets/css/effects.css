@@ -327,6 +327,7 @@ body .scenejs-editor-timeline {
     transform: rotate(360deg);
   }
 }
+
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
