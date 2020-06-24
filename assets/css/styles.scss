@@ -313,6 +313,10 @@ body.dark-mode {
   .fa-bootstrap{
     color: skyblue;
   }
+
+  .django svg path{
+    fill: white;
+  }
 }
 
 ////////////////////////Content Start///////////////////@extend
@@ -576,8 +580,8 @@ body.dark-mode {
         padding: 0.5rem;
         background-color: var(--text-color-2);
         color: var(--background-color);
-        margin-right: 0.5rem;
-        border-radius: 2px;
+        margin-right: 0.3rem;
+        border-radius: 4px;
         transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
 
         &:hover {
@@ -611,10 +615,10 @@ body.dark-mode {
   margin-bottom: 3rem;
 }
 .progress {
+  margin-bottom: .8rem;
   .progress-value {
     width: 200px;
     height: 14px;
-    margin-top: 0.6rem;
     position: relative;
     background-color: var(--text-color-2);
     &::after {
@@ -745,11 +749,12 @@ body.dark-mode {
 }
 
 .django {
-  img {
+  svg{
     height: 65px;
     width: 65px;
     -webkit-animation: rotate-3d 4s linear infinite;
     animation: rotate-3d 4s linear infinite;
+   
   }
 }
 .fa-html5 {

@@ -363,6 +363,10 @@ body.dark-mode .fa-bootstrap {
   color: skyblue;
 }
 
+body.dark-mode .django svg path {
+  fill: white;
+}
+
 .hand {
   -webkit-animation-name: wave-animation;
           animation-name: wave-animation;
@@ -682,8 +686,8 @@ body.dark-mode .fa-bootstrap {
   padding: 0.5rem;
   background-color: var(--text-color-2);
   color: var(--background-color);
-  margin-right: 0.5rem;
-  border-radius: 2px;
+  margin-right: 0.3rem;
+  border-radius: 4px;
   -webkit-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
   transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
@@ -721,10 +725,13 @@ body.dark-mode .fa-bootstrap {
   margin-bottom: 3rem;
 }
 
+.progress {
+  margin-bottom: .8rem;
+}
+
 .progress .progress-value {
   width: 200px;
   height: 14px;
-  margin-top: 0.6rem;
   position: relative;
   background-color: var(--text-color-2);
 }
@@ -887,7 +894,7 @@ body.dark-mode .fa-bootstrap {
           animation-delay: 2s !important;
 }
 
-.django img {
+.django svg {
   height: 65px;
   width: 65px;
   -webkit-animation: rotate-3d 4s linear infinite;
