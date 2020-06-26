@@ -221,7 +221,7 @@ body .scenejs-editor-timeline {
   justify-content: center;
   display: flex;
   align-items: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
   overflow: hidden;
 }
 
@@ -235,7 +235,7 @@ body .scenejs-editor-timeline {
   height: 100%;
   width: 100%;
   transform: translateX(100vw);
-  transition: all 1s cubic-bezier(0.11, 0.6, 0.96, -0.81);
+  transition: all 2s cubic-bezier(0.11, 0.6, 0.96, -0.81);
 }
 
 .wrapper-container::after,
@@ -254,12 +254,13 @@ body .scenejs-editor-timeline {
 .wrapper-container.finished::before {
   transform: translateX(-100vw);
   transition-delay: 0.2s;
-  transition: all 1.5s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 .wrapper-container.finished::after,
 .wrapper-container.finished::before {
   transform: translateY(-100vh);
+  transition: all 2.2s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .preloader-container.finished::before,
