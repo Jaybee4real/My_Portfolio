@@ -36,18 +36,16 @@ window.addEventListener("load", () => {
   ///////////////////////////Typing Animation////////////////////////////////
 
   const type = (element) => {
-    var x = 0;
-    text = element.innerHTML;
+    const text = element.innerHTML;
     element.innerHTML = "";
+    var x = 0;
     function animate() {
       if (x < text.length) {
         element.innerHTML += text.charAt(x);
         x++;
-
-        setTimeout(animate, 25);
+        setTimeout(animate, 22);
       }
     }
-
     animate();
   };
 
@@ -67,7 +65,7 @@ window.addEventListener("load", () => {
     type(document.querySelector(".profession-heading"));
   });
 
-  ////////////////////Kinetic Typing Animation Finished Action///////////////// //
+  ////////////////////Kinetic Typing Animation Finished Action and Typing Effect///////////////// //
 
   window.setTimeout(() => {
     document.querySelector(".wrapper-container").style.transform =
@@ -94,7 +92,7 @@ document.querySelector(".mobile-nav-toggle").addEventListener("click", () => {
 ////////////////////////Add Classes Based on Visibility/////////////////
 
 let options = {
-  rootMargin: "200px",
+  // rootMargin: "-250px",
 };
 
 let revealElements = document.querySelectorAll(".text-reveal-trigger");
@@ -103,12 +101,81 @@ let reveal = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
       entry.target.classList.add("reveal-text");
-    } else {
-      entry.target.classList.remove("reveal-text");
+    }
+  });
+});
+
+revealElements.forEach((element) => {
+  reveal.observe(element);
+});
+
+///////////////////////Opacity Effect//////////
+
+let opacityrevealElements = document.querySelectorAll(".opacity-reveal");
+
+let opacityReveal = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add("appear");
     }
   });
 }, options);
 
-revealElements.forEach((element) => {
-  reveal.observe(element);
+opacityrevealElements.forEach((element) => {
+  opacityReveal.observe(element);
+});
+
+///////////////PORTFOLIO Gallery Filter Function///////////
+
+$(document).ready(function () {
+  $(".filter-button").click(function () {
+    var value = $(this).attr("data-filter");
+
+    if (value == "all") {
+      //$('.filter').removeClass('hidden');
+      $(".filter").show("1000");
+    } else {
+      //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+      //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+      $(".filter")
+        .not("." + value)
+        .hide("3000");
+      $(".filter")
+        .filter("." + value)
+        .show("3000");
+    }
+  });
+});
+
+let filterButtons = document.querySelectorAll(".filter-button");
+
+filterButtons.forEach((element) => {
+  element.addEventListener("click", () => {
+    filterButtons.forEach((element) => {
+      element.classList.remove("active");
+    });
+    element.classList.add("active");
+  });
+});
+
+/////////////Navbar Item Active State Changer///////////
+
+let navLinks = document.querySelectorAll(".nav-item");
+
+document.querySelector(".main-content").addEventListener("scroll", (event) => {
+  let fromTop = window.scrollY;
+  console.log(fromTop)
+
+  navLinks.forEach((link) => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 });

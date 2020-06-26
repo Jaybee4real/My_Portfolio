@@ -395,7 +395,7 @@ body .scenejs-editor-timeline {
   animation-delay: .5s;
 }
 
-.reveal-trigger {
+.text-reveal-trigger {
   opacity: 0;
 }
 
@@ -405,6 +405,25 @@ body .scenejs-editor-timeline {
   opacity: 1;
   -webkit-animation-name: reveal-text;
   animation-name: reveal-text;
+}
+
+.opacity-reveal{
+  opacity: 0;
+}
+
+
+.appear{
+  animation-delay: .8s;
+  animation: appear .6s linear forwards;
+}
+
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .reveal-text::after {

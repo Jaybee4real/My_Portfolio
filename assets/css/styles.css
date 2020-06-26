@@ -367,6 +367,18 @@ body.dark-mode .django svg path {
   fill: white;
 }
 
+.section-header {
+  font-family: "Bellota", cursive;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.subsection-header {
+  font-family: "Bellota", cursive;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
 .hand {
   -webkit-animation-name: wave-animation;
           animation-name: wave-animation;
@@ -539,7 +551,7 @@ body.dark-mode .django svg path {
   font-size: 2rem;
   margin-top: -0.8rem;
   margin-bottom: 0;
-  line-height: 1 !important;
+  line-height: 1.2 !important;
   color: var(--text-color-2);
 }
 
@@ -548,6 +560,7 @@ body.dark-mode .django svg path {
   color: var(--text-color-1);
   font-weight: 300;
   line-height: 1;
+  font-family: "Bellota", cursive;
 }
 
 .section-one .introduction p {
@@ -726,7 +739,7 @@ body.dark-mode .django svg path {
 }
 
 .progress {
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 .progress .progress-value {
@@ -1044,6 +1057,181 @@ body.dark-mode .django svg path {
   100% {
     -webkit-transform: rotate3d(0);
             transform: rotate3d(0);
+  }
+}
+
+.filter-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 70%;
+  margin-bottom: 1.5rem;
+}
+
+.filter-list .filter-option {
+  text-transform: uppercase;
+  margin: 0 0.5rem;
+  padding: 0 .7rem;
+  padding-top: .1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: var(--text-color-2);
+  color: var(--background-color);
+}
+
+.filter-list .filter-option.active {
+  color: var(--theme-color);
+  font-weight: 600;
+  background-color: var(--background-color);
+  border: 2px solid var(--text-color-2);
+}
+
+.filter-list .filter-option:hover {
+  color: var(--theme-color);
+}
+
+.project-desc {
+  margin-bottom: 0.2rem;
+  line-height: 1;
+  color: var(--theme-color);
+}
+
+.project-desc span {
+  font-size: 0.6rem;
+  color: var(--text-color-2);
+}
+
+.project-tools {
+  margin-bottom: 0.2rem;
+  line-height: 1;
+}
+
+.project-tools {
+  min-height: 3rem;
+}
+
+.project-items .item:hover .hover-info {
+  opacity: 1;
+}
+
+.project-items {
+  width: 120%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project-items .item {
+  width: 320px;
+  height: 300px;
+  margin: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.project-items .item img {
+  height: 240px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.project-items .item .hover-info {
+  position: absolute;
+  -webkit-transform: translateY(calc(-3rem + -113%));
+          transform: translateY(calc(-3rem + -113%));
+  height: 80%;
+  width: 100%;
+  background-color: #ffa600a8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  border-radius: 5px;
+}
+
+.project-items .item .hover-info .info {
+  color: white;
+  text-align: center;
+}
+
+.project-items .item .hover-info .buttons-container {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-items .item .hover-info .code,
+.project-items .item .hover-info .demo {
+  font-size: 0.9rem;
+  background-color: white;
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.project-items .item .hover-info .code:hover,
+.project-items .item .hover-info .demo:hover {
+  background-color: black;
+  color: white;
+}
+
+.project-items .item .hover-info .code.disabled, .project-items .item .hover-info .demo.disabled {
+  background-color: grey !important;
+  color: black;
+}
+
+.project-items .item .hover-info .code .fa,
+.project-items .item .hover-info .demo .fa {
+  margin-right: 0.2rem !important;
+}
+
+@media (max-width: 560px) {
+  .filter-list {
+    width: 100%;
+  }
+  .project-items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    left: -1.3rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
