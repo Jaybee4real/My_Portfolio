@@ -52,27 +52,24 @@ window.addEventListener("load", () => {
   ///////////////Skip Button Press Action//////////
 
   document.querySelector(".skip").addEventListener("click", () => {
-    document.querySelector(".wrapper-container").style.transform =
-      "translateY(-110vw)";
     document.querySelector(".wrapper-container").classList.add("finished");
+    window.setTimeout(() => {
+      document.querySelector(".main-content").classList.remove("hidden");
+      type(document.querySelector(".profession-heading"));
+    }, 200);
     document.querySelector("body").style.animation = "none";
     document.querySelector("body").style.backgroundColor =
       "var(--background-color)";
-    document.querySelector(".main-content").classList.remove("hidden");
-    setTimeout(() => {
-      document.querySelector(".wrapper-container").style.opacity = 0;
-    }, 1000);
-    type(document.querySelector(".profession-heading"));
   });
 
   ////////////////////Kinetic Typing Animation Finished Action and Typing Effect///////////////// //
 
   window.setTimeout(() => {
-    document.querySelector(".wrapper-container").style.transform =
-      "translateY(-110vw)";
     document.querySelector(".wrapper-container").classList.add("finished");
-    document.querySelector(".main-content").classList.remove("hidden");
-    type(document.querySelector(".profession-heading"));
+    window.setTimeout(() => {
+      document.querySelector(".main-content").classList.remove("hidden");
+      type(document.querySelector(".profession-heading"));
+    }, 200);
   }, 18000);
 });
 
@@ -135,8 +132,10 @@ $(document).ready(function () {
       //$('.filter').removeClass('hidden');
       $(".filter").show("1000");
     } else {
-      //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-      //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+      // $('.filter[filter-item="' + value + '"]').removeClass("hidden");
+      // $(".filter")
+      //   .not('.filter[filter-item="' + value + '"]')
+      //   .addClass("hidden");
       $(".filter")
         .not("." + value)
         .hide("3000");
@@ -164,7 +163,7 @@ let navLinks = document.querySelectorAll(".nav-item");
 
 document.querySelector(".main-content").addEventListener("scroll", (event) => {
   let fromTop = window.scrollY;
-  console.log(fromTop)
+  console.log(fromTop);
 
   navLinks.forEach((link) => {
     let section = document.querySelector(link.hash);
