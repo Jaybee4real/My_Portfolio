@@ -60,6 +60,8 @@ window.addEventListener("load", () => {
     document.querySelector("body").style.animation = "none";
     document.querySelector("body").style.backgroundColor =
       "var(--background-color)";
+    document.querySelector(".main-content").classList.remove("hidden");
+    type(document.querySelector(".profession-heading"));
   });
 
   ////////////////////Kinetic Typing Animation Finished Action and Typing Effect///////////////// //
