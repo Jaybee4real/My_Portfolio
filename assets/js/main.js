@@ -61,7 +61,6 @@ window.addEventListener("load", () => {
     document.querySelector("body").style.backgroundColor =
       "var(--background-color)";
     document.querySelector(".main-content").classList.remove("hidden");
-    type(document.querySelector(".profession-heading"));
   });
 
   ////////////////////Kinetic Typing Animation Finished Action and Typing Effect///////////////// //
@@ -178,5 +177,40 @@ document.querySelector(".main-content").addEventListener("scroll", (event) => {
     } else {
       link.classList.remove("active");
     }
+  });
+});
+
+//////////light Sound Switch////////
+
+let lightSwitch = new Audio();
+lightSwitch.src = "./assets/switch.mp3";
+
+/////////Nav Item Click Function ////////
+
+let mobileNavs = document.querySelectorAll(".mobile-nav-item");
+let Navs = document.querySelectorAll(".nav-item");
+
+mobileNavs.forEach((element) => {
+  element.addEventListener("click", () => {
+    document.querySelector(".mobile-nav-toggle").classList.toggle("active");
+    document.querySelector(".mobile-menu").classList.toggle("active");
+    document.querySelector(".navbar").classList.toggle("transparent");
+    element.addEventListener("click", () => {
+      $("body").animate({
+          scrollTop: $(element.hash).offset().top - 60,
+        },
+        2000
+      );
+    });
+  });
+});
+
+Navs.forEach((element) => {
+  element.addEventListener("click", () => {
+    $("html,body").animate({
+        scrollTop: $(element.hash).offset().top - 60,
+      },
+      2000
+    );
   });
 });

@@ -414,8 +414,8 @@ body .scenejs-editor-timeline {
 
 
 .appear{
-  animation-delay: .8s;
-  animation: appear .6s linear forwards;
+  animation-delay: 1.2s;
+  animation: appear 1.2s linear forwards;
 }
 
 @keyframes appear{
