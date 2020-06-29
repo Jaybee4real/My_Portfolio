@@ -39,21 +39,21 @@
   <div class="main-content hidden">
     <div class="navbar">
       <div class="logo"><i class="fa fa-code"></i> Jaybee</div>
-      <a class="nav-item " href="#about">About</a>
-      <a class="nav-item" href="#skills">My Skills</a>
-      <a class="nav-item" href="#projects">Projects</a>
+      <a class="nav-item about-nav" target="#about">About</a>
+      <a class="nav-item skills-nav" target="#skills">My Skills</a>
+      <a class="nav-item projects-nav" target="#projects">Projects</a>
       <!-- <a class="nav-item">Certifications</a> -->
-      <a class="nav-item" href="#blog">Blog</a>
-      <a class="nav-item" href="#contact">Contact</a>
+      <a class="nav-item blog-nav" target="#blog">Blog</a>
+      <a class="nav-item contact-nav" target="#contact">Contact</a>
       <div class="mobile-nav-toggle"></div>
     </div>
     <div class="mobile-menu">
-      <a href="#about" class="mobile-nav-item">About</a>
-      <a href="#skills" class="mobile-nav-item" style="transition-delay: .3s;">My Skills</a>
-      <a href="projects" class="mobile-nav-item" style="transition-delay: .5s;">Projects</a>
+      <a target="#about" class="mobile-nav-item about-nav">About</a>
+      <a target="#skills" class="mobile-nav-item skills-nav" style="transition-delay: .3s;">My Skills</a>
+      <a target="#projects" class="mobile-nav-item projects-nav" style="transition-delay: .5s;">Projects</a>
       <!-- <a class="mobile-nav-item" style="transition-delay: .6s;">Certifications</a> -->
-      <a href="#contact" class="mobile-nav-item" style="transition-delay: .8s;">Contact</a>
-      <a href="#blog" class="mobile-nav-item" style="transition-delay: 1.1s;">Blog</a>
+      <a target="#contact" class="mobile-nav-item contact-nav" style="transition-delay: .8s;">Contact</a>
+      <a target="#blog" class="mobile-nav-item blog-nav" style="transition-delay: 1.1s;">Blog</a>
     </div>
     <i class="mode-toggle fa fa-lightbulb-on" onmousedown="lightSwitch.play()"></i>
     <!-- <div class="arrow"><i class="fa fa-arrow-down"></i></div> -->
@@ -86,11 +86,11 @@
         </div>
       </div>
 
-      <div class="about-section split-section">
+      <div class="about-section split-section" id="about">
         <div class="left-side">
           <h2 class="section-header text-reveal-trigger">About <br class="dissapear-560"> Me</h2>
         </div>
-        <div class="right-side opacity-reveal " id="about">
+        <div class="right-side opacity-reveal " >
           I am a Frontend Developer Based In Lagos, Nigeria. I help create beautiful applications for both web and
           mobile, doing the best i can to satisfy whoever i create these solutions for, leaving them happy in the end
           <br>
@@ -109,21 +109,21 @@
           If you’ve got a project you’d like to work on with me just get in touch and we can get to work!
           <div class="buttons">
             <a href="./assets/Okoroji Faith new resume.pdf" download>Download Resume</a>
-            <a href="">Contact Me</a>
+            <a class="nav-item" style="cursor: pointer;" target="#contact">Contact Me</a>
           </div>
         </div>
       </div>
 
 
 
-      <div class="my-skills-section split-section">
+      <div id="skills" class="my-skills-section split-section">
         <div class="left-side">
           <h2 class="section-header text-reveal-trigger reveal-second">My <br class="dissapear-560"> Skills</h2>
         </div>
         <div class="right-side ">
           <h2 class="subsection-header text-reveal-trigger">Skills</h2>
 
-          <div class="progress-container progress-section" id="skills">
+          <div class="progress-container progress-section" >
             <div class="progress opacity-reveal">
               Web Development
               <div class="progress-value one"></div>
@@ -287,7 +287,7 @@
 
       </div>
 
-      <div class="projects-section split-section" style="flex: 4;">
+      <div class="projects-section split-section" style="flex: 4;" id="projects">
         <div class="left-side">
           <h2 class="section-header text-reveal-trigger reveal-second">Recent<br class="dissapear-560"> Projects</h2>
         </div>
@@ -308,7 +308,7 @@
             </div> -->
           </div>
 
-          <div class="project-items" id="projects">
+          <div class="project-items" >
 
 
             <div class="item item-3 filter mobile">
@@ -448,6 +448,51 @@
             </div>
 
 
+            <div class="item item-3 filter web">
+              <img src="./assets/img/Ostd.png" alt="" />
+              <div class="project-desc">Osteopathe Draveil <span>(France)</span></div>
+              <div class="project-tools">Tools: Sass, Js, Jekyll </div>
+              <div class="hover-info">
+                <div class="info">This repository is private, code available on request</div>
+                <div class="buttons-container">
+                  <a class="code disabled"><i class="fa fa-github"></i>Code</a>
+                  <a class="demo" target="_blank" href="https://osteopathe-draveil.fr"><i
+                      class="fa fa-eye"></i>Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item-3 filter web">
+              <img src="./assets/img/Ostp8.png" alt="" />
+              <div class="project-desc">Osteopathe Paris 8 <span>(France)</span></div>
+              <div class="project-tools">Tools: Sass, Js, Jekyll </div>
+              <div class="hover-info">
+                <div class="info">This repository is private, code available on request</div>
+                <div class="buttons-container">
+                  <a class="code disabled"><i class="fa fa-github"></i>Code</a>
+                  <a class="demo" target="_blank" href="https://osteopatheparis8.fr"><i
+                      class="fa fa-eye"></i>Demo</a>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="item item-3 filter web">
+              <img src="./assets/img/Taxi-75.png" alt="" />
+              <div class="project-desc">Taxi 75<span>(France)</span></div>
+              <div class="project-tools">Tools: Sass, Js, Jekyll </div>
+              <div class="hover-info">
+                <div class="info">This repository is private, code available on request</div>
+                <div class="buttons-container">
+                  <a class="code disabled"><i class="fa fa-github"></i>Code</a>
+                  <a class="demo" target="_blank" href="https://Taxi-75.fr"><i
+                      class="fa fa-eye"></i>Demo</a>
+                </div>
+              </div>
+            </div>
+
+
 
 
           </div>
@@ -456,7 +501,7 @@
         </div>
       </div>
 
-      <div id="blog" class="blog split-section" style="flex: 4;" id="projects">
+      <div id="blog" class="blog split-section" style="flex: 4;">
         <div class="left-side">
           <h2 class="section-header text-reveal-trigger reveal-second" style="line-height: 1.3;">Blog<br
               class="dissapear-560"></h2>
@@ -477,12 +522,12 @@
 
 
 
-      <div id="contact" class="contact split-section" style="flex: 4;" id="projects">
+      <div  class="contact split-section" style="flex: 4;" id="contact">
         <div class="left-side">
           <h2 class="section-header text-reveal-trigger reveal-second" style="line-height: 1.3;">Contact<br
               class="dissapear-560"> Me</h2>
         </div>
-        <div class="right-side  opacity-reveal">
+        <div class="right-side  opacity-reveal ">
           <h2 class="subsection-header text-reveal-trigger" style="font-size: .9rem;">Fill The Form And I Will Get In
             Touch With You As Soon As Possible</h2>
 

@@ -195,22 +195,16 @@ mobileNavs.forEach((element) => {
     document.querySelector(".mobile-nav-toggle").classList.toggle("active");
     document.querySelector(".mobile-menu").classList.toggle("active");
     document.querySelector(".navbar").classList.toggle("transparent");
-    element.addEventListener("click", () => {
-      $("body").animate({
-          scrollTop: $(element.hash).offset().top - 60,
-        },
-        2000
-      );
-    });
+    document
+      .querySelector(element.getAttribute("target"))
+      .scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
 
 Navs.forEach((element) => {
   element.addEventListener("click", () => {
-    $("html,body").animate({
-        scrollTop: $(element.hash).offset().top - 60,
-      },
-      2000
-    );
+    document
+      .querySelector(element.getAttribute("target"))
+      .scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
