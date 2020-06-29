@@ -30,10 +30,6 @@ body {
   font-size: 20px;
   margin: 0;
   padding: 0;
-  -webkit-transition: 2s all ease-out;
-  transition: 2s all ease-out;
-  -webkit-transition-delay: -1s;
-  transition-delay: -1s;
   width: 100%;
   overflow-x: hidden;
   -webkit-animation: change-back 16s ease-in-out;
@@ -414,8 +410,8 @@ body .scenejs-editor-timeline {
 
 
 .appear{
-  animation-delay: 1.2s;
-  animation: appear 1.2s linear forwards;
+  animation-delay: .8s;
+  animation: appear .6s linear forwards;
 }
 
 @keyframes appear{
