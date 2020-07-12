@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
     document.querySelector(".animate").style.color = "white";
     document.querySelector(".animate").innerHTML =
       "Loaded <i style='margin-left: .7rem' class='fa fa-arrow-right'></>";
+      document.querySelector('body').classList.add("animated")
   }, 700);
 
   ////////////////Start Kinetic Typing///////////

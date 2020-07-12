@@ -32,10 +32,13 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+
+}
+
+body.animated{
   -webkit-animation: change-back 16s ease-in-out;
   animation: change-back 16s ease-in-out;
 }
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
