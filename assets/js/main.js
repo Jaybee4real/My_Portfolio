@@ -209,3 +209,7 @@ Navs.forEach((element) => {
       .scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
+
+document.querySelector(".scroll-top").addEventListener("click", () => {
+  document.querySelector(".picture").scrollIntoView({ behavior: "smooth", block: "start" });
+})
