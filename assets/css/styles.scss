@@ -899,7 +899,7 @@ body.dark-mode {
     margin-left: -1.2rem;
   }
 
-  .aka{
+  .aka {
     position: relative;
     top: -1rem !important;
   }
@@ -996,7 +996,11 @@ body.dark-mode {
       height: 240px;
       width: 100%;
       border-radius: 5px;
-    }
+
+      &.cover {
+        object-fit: cover;
+      }
+    } 
 
     .hover-info {
       position: absolute;

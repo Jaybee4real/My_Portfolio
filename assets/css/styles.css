@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,900;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap");
 .fa-arrow-down {
-  -webkit-animation: move-down 1s linear infinite;
   animation: move-down 1s linear infinite;
   color: black !important;
 }
@@ -26,16 +25,6 @@
   background-color: var(--theme-color);
 }
 
-@-webkit-keyframes move-down {
-  0% {
-    position: relative;
-    top: 0rem;
-  }
-  100% {
-    top: 2rem;
-  }
-}
-
 @keyframes move-down {
   0% {
     position: relative;
@@ -47,14 +36,6 @@
 }
 
 /* //////////////////////////Preloaders End////////////////////////// */
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -68,26 +49,17 @@
   position: absolute;
   width: 100vw;
   background-color: var(--background-color);
-  -webkit-animation: fade-in 1.2s ease-in-out;
-          animation: fade-in 1.2s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
+  animation: fade-in 1.2s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 .navbar {
   width: 100vw !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: var(--text-color-1) !important;
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: row !important;
-          flex-direction: row !important;
+  flex-direction: row !important;
   height: 3rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: fixed;
   border-bottom: 1px solid #eee;
   padding-left: 5vw;
@@ -116,7 +88,6 @@
   margin: 0.5rem 1rem;
   font-weight: 300 !important;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-size: 0.9rem;
 }
@@ -139,24 +110,20 @@
   margin: 5px 0;
   cursor: pointer;
   z-index: 3;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition: all 0.3s ease-out;
+  transform: rotate(180deg);
   transition: all 0.3s ease-out;
 }
 
 .mobile-nav-toggle::before {
   content: "";
   position: absolute;
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
+  transform: translateY(-7px);
   height: 4px;
   width: 1rem;
   right: 0;
   border-radius: 5px;
   background-color: var(--text-color-1);
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -173,13 +140,11 @@
   content: "";
   position: absolute;
   height: 4px;
-  -webkit-transform: translateY(7px);
-          transform: translateY(7px);
+  transform: translateY(7px);
   width: 1rem;
   border-radius: 5px;
   background-color: var(--text-color-1);
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -195,21 +160,18 @@
 
 .mobile-nav-toggle.active {
   background-color: transparent !important;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .mobile-nav-toggle.active::after {
-  -webkit-transform: translateY(0px) rotateZ(-45deg);
-          transform: translateY(0px) rotateZ(-45deg);
+  transform: translateY(0px) rotateZ(-45deg);
   width: 100%;
   opacity: 1;
   background-color: white;
 }
 
 .mobile-nav-toggle.active::before {
-  -webkit-transform: translateY(-1px) rotate(45deg);
-          transform: translateY(-1px) rotate(45deg);
+  transform: translateY(-1px) rotate(45deg);
   width: 100%;
   opacity: 1;
   background-color: white;
@@ -234,7 +196,6 @@
   color: var(--text-color-1);
   font-size: 1.3rem;
   cursor: pointer;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   z-index: 3;
 }
@@ -265,20 +226,10 @@
   height: 100vh;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.808);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all 0.6s ease-in-out;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   transition: all 0.6s ease-in-out;
   opacity: 0;
   z-index: -3;
@@ -291,16 +242,13 @@
   color: var(--text-color-1);
   cursor: pointer;
   opacity: 0;
-  -webkit-transition: opacity 0.4s ease-in;
   transition: opacity 0.4s ease-in;
 }
 
 .mobile-menu .mobile-nav-item:hover {
   color: var(--text-color-2);
-  -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
-  -webkit-transition-delay: 0s !important;
-          transition-delay: 0s !important;
+  transition-delay: 0s !important;
 }
 
 @media (max-width: 560px) {
@@ -328,8 +276,7 @@
 }
 
 .mobile-menu.active .mobile-nav-item {
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
   opacity: 1;
 }
 
@@ -363,79 +310,36 @@ body.dark-mode .django svg path {
 }
 
 .hand {
-  -webkit-animation-name: wave-animation;
-          animation-name: wave-animation;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-transform-origin: 70% 70%;
-          transform-origin: 70% 70%;
+  animation-name: wave-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
   will-change: transform;
   display: inline-block;
-  cursor: -webkit-grab;
   cursor: grab;
 }
 
 @keyframes wave-animation {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   10% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
   20% {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
+    transform: rotate(12deg);
   }
   30% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
   40% {
-    -webkit-transform: rotate(9deg);
-            transform: rotate(9deg);
+    transform: rotate(9deg);
   }
   50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@-webkit-keyframes wave-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  10% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
-  }
-  20% {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
-  }
-  30% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
-  }
-  40% {
-    -webkit-transform: rotate(9deg);
-            transform: rotate(9deg);
-  }
-  50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -445,13 +349,8 @@ body.dark-mode .django svg path {
 
 .section-one {
   margin-top: 7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100vw;
 }
 
@@ -466,8 +365,7 @@ body.dark-mode .django svg path {
   border: 7px solid var(--theme-color);
   top: -5%;
   z-index: 1;
-  -webkit-animation: spin 20s linear infinite;
-          animation: spin 20s linear infinite;
+  animation: spin 20s linear infinite;
   border-radius: 10px;
 }
 
@@ -478,8 +376,7 @@ body.dark-mode .django svg path {
   top: -5%;
   z-index: 1;
   border-radius: 10px;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation-delay: 1.5s;
   border-radius: 50%;
 }
 
@@ -489,8 +386,7 @@ body.dark-mode .django svg path {
   height: 80%;
   width: 80%;
   border-radius: 50%;
-  -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
   border: 7px solid transparent;
   border-top-color: var(--text-color-2);
 }
@@ -504,8 +400,7 @@ body.dark-mode .django svg path {
   animation: spin 3s reverse infinite;
   border: 7px solid transparent;
   border-top-color: var(--theme-color);
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
 .section-one .picture {
@@ -519,7 +414,6 @@ body.dark-mode .django svg path {
   background-repeat: no-repeat;
   background-position: center 20px;
   background-size: cover;
-  -webkit-clip-path: polygon(28% 0, 100% 25%, 61% 100%, 0 93%);
   clip-path: polygon(31% 0, 100% 25%, 61% 100%, 0 93%);
 }
 
@@ -561,10 +455,7 @@ body.dark-mode .django svg path {
 
 @media (max-width: 790px) {
   .section-one {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .introduction {
     width: 100% !important;
@@ -575,7 +466,6 @@ body.dark-mode .django svg path {
 @media (max-width: 560px) {
   .picture {
     width: 100% !important;
-    -webkit-clip-path: polygon(28% 0, 100% 25%, 71% 100%, 0 93%) !important;
     clip-path: polygon(28% 0, 100% 25%, 71% 100%, 0 93%) !important;
     height: 500px !important;
     margin-top: 25px;
@@ -589,29 +479,16 @@ body.dark-mode .django svg path {
 }
 
 .links {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .links a {
   color: var(--text-color-2);
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-size: 0.6rem;
   margin: 0 0.7rem;
   margin-top: 0.5rem;
@@ -632,25 +509,14 @@ body.dark-mode .django svg path {
 
 .split-section {
   margin-top: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .split-section .left-side {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .split-section .left-side h2 {
@@ -658,15 +524,11 @@ body.dark-mode .django svg path {
   text-align: left;
   position: relative;
   color: var(--theme-color);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 
 .split-section .right-side {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
   margin-top: 1rem;
   padding: 0 8%;
   font-size: 0.85rem;
@@ -684,7 +546,6 @@ body.dark-mode .django svg path {
   color: var(--background-color);
   margin-right: 0.3rem;
   border-radius: 4px;
-  -webkit-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
   transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -694,10 +555,7 @@ body.dark-mode .django svg path {
 
 @media (max-width: 640px) {
   .split-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .split-section .left-side {
     margin-bottom: -1rem;
@@ -708,16 +566,10 @@ body.dark-mode .django svg path {
 }
 
 .progress-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin-bottom: 3rem;
 }
 
@@ -750,10 +602,7 @@ body.dark-mode .django svg path {
 
 @media (max-width: 998px) {
   .progress-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .progress-section .progress-value {
     width: 100%;
@@ -764,30 +613,18 @@ body.dark-mode .django svg path {
 .technologies-section .tools-section,
 .frameworks-section .skills-section,
 .frameworks-section .tools-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .technologies-section .skill,
 .frameworks-section .skill {
   height: 5rem;
   width: 7rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  justify-content: center;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   margin: 1rem;
 }
 
@@ -803,15 +640,9 @@ body.dark-mode .django svg path {
   position: relative;
   height: 4rem;
   width: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   margin-bottom: 0.5rem;
 }
@@ -831,7 +662,6 @@ body.dark-mode .django svg path {
   border-radius: 50%;
   border: 2.4px solid transparent;
   border-top-color: orange;
-  -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
 
@@ -844,80 +674,67 @@ body.dark-mode .django svg path {
   border-radius: 50%;
   border: 2.4px solid transparent;
   border-top-color: var(--text-color-2);
-  -webkit-animation: spin 3s reverse infinite;
   animation: spin 3s reverse infinite;
 }
 
 .css::after,
 .css::before {
-  -webkit-animation-delay: 0.4s !important;
-          animation-delay: 0.4s !important;
+  animation-delay: 0.4s !important;
 }
 
 .js::after,
 .js::before {
-  -webkit-animation-delay: 0.8s !important;
-          animation-delay: 0.8s !important;
+  animation-delay: 0.8s !important;
 }
 
 .css::after,
 .css::before {
-  -webkit-animation-delay: 1.2s !important;
-          animation-delay: 1.2s !important;
+  animation-delay: 1.2s !important;
 }
 
 .python::after,
 .python::before {
-  -webkit-animation-delay: 1.6s !important;
-          animation-delay: 1.6s !important;
+  animation-delay: 1.6s !important;
 }
 
 .ruby::after,
 .ruby::before {
-  -webkit-animation-delay: 2s !important;
-          animation-delay: 2s !important;
+  animation-delay: 2s !important;
 }
 
 .react::after,
 .react::before {
-  -webkit-animation-delay: 2.4s !important;
-          animation-delay: 2.4s !important;
+  animation-delay: 2.4s !important;
 }
 
 .rn::after,
 .rn::before {
-  -webkit-animation-delay: 2s !important;
-          animation-delay: 2s !important;
+  animation-delay: 2s !important;
 }
 
 .django svg {
   height: 65px;
   width: 65px;
-  -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
 }
 
 .fa-html5 {
   color: #e34c26;
-  -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
 }
 
 .fa-css3 {
   color: #2965f1;
-  -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
 }
 
 .fa-sass {
   color: #fd6780;
-  -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
 }
 
 .fa-js {
   color: #f0db4f;
-  -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
 }
 
@@ -925,24 +742,20 @@ body.dark-mode .django svg path {
   background-image: url(../img/flutter.svg);
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
 }
 
 .fa-bootstrap {
   color: darkblue;
-  -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
 }
 
 .fa-git-alt {
   color: #f1502f;
-  -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
 }
 
 .fa-react.rn {
-  -webkit-animation: spin 10s reverse infinite;
   animation: spin 10s reverse infinite;
 }
 
@@ -950,14 +763,12 @@ body.dark-mode .django svg path {
   background: -webkit-linear-gradient(-137deg, #f0db4f 43%, var(--text-color-2) 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
 }
 
 .fa-gem {
   font-size: 2rem;
   color: #a91401;
-  -webkit-animation: rotate-3d 1.7s linear infinite;
   animation: rotate-3d 1.7s linear infinite;
 }
 
@@ -965,7 +776,6 @@ body.dark-mode .django svg path {
   background-image: url(../img/dart-logo.svg);
   background-position: right;
   background-repeat: no-repeat;
-  -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
 }
 
@@ -974,18 +784,15 @@ body.dark-mode .django svg path {
   background: -webkit-linear-gradient(90deg, #a91401 43%, var(--text-color-2) 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: rotate-3d 4s linear infinite;
   animation: rotate-3d 4s linear infinite;
 }
 
 .fa-react {
   color: #00b7ff;
-  -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
 }
 
 .unity {
-  -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
 }
 
@@ -995,7 +802,6 @@ body.dark-mode .django svg path {
 
 .react-native {
   color: #00b7ff;
-  -webkit-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
 }
 
@@ -1006,12 +812,8 @@ body.dark-mode .django svg path {
 @media (max-width: 560px) {
   .skills-section,
   .tools-section {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     margin-left: -1.2rem;
   }
@@ -1020,50 +822,25 @@ body.dark-mode .django svg path {
     top: -1rem !important;
   }
   .appear-560 {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-  }
-}
-
-@-webkit-keyframes rotate-3d {
-  0% {
-    -webkit-transform: rotate3d(0);
-            transform: rotate3d(0);
-  }
-  50% {
-    -webkit-transform: rotate3d(0, 1, 0, 3.142rad);
-            transform: rotate3d(0, 1, 0, 3.142rad);
-  }
-  100% {
-    -webkit-transform: rotate3d(0);
-            transform: rotate3d(0);
   }
 }
 
 @keyframes rotate-3d {
   0% {
-    -webkit-transform: rotate3d(0);
-            transform: rotate3d(0);
+    transform: rotate3d(0);
   }
   50% {
-    -webkit-transform: rotate3d(0, 1, 0, 3.142rad);
-            transform: rotate3d(0, 1, 0, 3.142rad);
+    transform: rotate3d(0, 1, 0, 3.142rad);
   }
   100% {
-    -webkit-transform: rotate3d(0);
-            transform: rotate3d(0);
+    transform: rotate3d(0);
   }
 }
 
 .filter-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 70%;
   margin-bottom: 1.5rem;
 }
@@ -1075,7 +852,6 @@ body.dark-mode .django svg path {
   padding-top: 0.1rem;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background-color: var(--text-color-2);
   color: var(--background-color);
@@ -1119,15 +895,9 @@ body.dark-mode .django svg path {
 
 .project-items {
   width: 120%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-direction: row;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .project-items .item {
@@ -1144,28 +914,21 @@ body.dark-mode .django svg path {
   border-radius: 5px;
 }
 
+.project-items .item img.cover {
+  object-fit: cover;
+}
+
 .project-items .item .hover-info {
   position: absolute;
-  -webkit-transform: translateY(calc(-3rem + -113%));
-          transform: translateY(calc(-3rem + -113%));
+  transform: translateY(calc(-3rem + -113%));
   height: 80%;
   width: 100%;
   background-color: #ffa600a8;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
   opacity: 0;
-  -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
   border-radius: 5px;
 }
@@ -1176,16 +939,10 @@ body.dark-mode .django svg path {
 }
 
 .project-items .item .hover-info .buttons-container {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .project-items .item .hover-info .code,
@@ -1196,7 +953,6 @@ body.dark-mode .django svg path {
   padding: 0 0.5rem;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 
@@ -1222,25 +978,16 @@ body.dark-mode .django svg path {
     width: 100%;
   }
   .project-items {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     position: relative;
     left: -1.3rem;
   }
 }
 
 .contact-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -1250,33 +997,20 @@ textarea {
 }
 
 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 3rem;
 }
 
 .form-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 @media (max-width: 560px) {
   .form-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   input[type="text"] {
     margin-top: 1rem;
@@ -1292,7 +1026,6 @@ input[type="submit"] {
   border-radius: 5px;
   color: var(--background-color);
   border: none;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -1317,7 +1050,6 @@ textarea {
   color: var(--text-color-2);
   font-size: 0.8rem;
   line-height: 1;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: var(--background-color);
 }
@@ -1330,30 +1062,6 @@ textarea:focus {
 
 textarea {
   padding-bottom: 0.75rem;
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  font-family: "Bellota", cursive;
-  font-size: 1rem;
-  color: var(--theme-color);
-  font-weight: 500;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  font-family: "Bellota", cursive;
-  font-size: 1rem;
-  color: var(--theme-color);
-  font-weight: 500;
-}
-
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
-  font-family: "Bellota", cursive;
-  font-size: 1rem;
-  color: var(--theme-color);
-  font-weight: 500;
 }
 
 input::placeholder,

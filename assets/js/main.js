@@ -126,18 +126,13 @@ opacityrevealElements.forEach((element) => {
 
 ///////////////PORTFOLIO Gallery Filter Function///////////
 
-$(document).ready(function () {
+wi(function () {
   $(".filter-button").click(function () {
     var value = $(this).attr("data-filter");
 
     if (value == "all") {
-      //$('.filter').removeClass('hidden');
       $(".filter").show("1000");
     } else {
-      // $('.filter[filter-item="' + value + '"]').removeClass("hidden");
-      // $(".filter")
-      //   .not('.filter[filter-item="' + value + '"]')
-      //   .addClass("hidden");
       $(".filter")
         .not("." + value)
         .hide("3000");
