@@ -89,7 +89,7 @@ scene.set({
     1: Scene.typing({ text: "'m Okoroji Faith, ", duration: 1 }),
   },
   "[data-typing='engineer']": {
-    1.5: Scene.typing({ text: "A Frontend Programmer", duration: 1 }),
+    1.5: Scene.typing({ text: "A Frontend Developer", duration: 1 }),
   },
   "[data-typing='with']": {
     3.3: Scene.typing({ text: "with", duration: 0.5 }),
