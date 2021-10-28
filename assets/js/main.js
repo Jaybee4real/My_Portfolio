@@ -1,12 +1,28 @@
+
 window.addEventListener("load", () => {
   ////////////Upadate Animation Text State////////
+  // if (!window.origin.includes("localhost") || !window.origin.includes("http://127.0.0.1")) {
+  // send an email to me everytime the page is loaded
+  const formData = new FormData();
+  console.log("Sending email", window.origin);
+  formData.append("url", window.location.href);
+  formData.append("name", "Notifier Bot")
+  formData.append("email", "okorojijaybee1@gmail.com")
+  formData.append("message", "Your portfolio was visited")
+  fetch("https://formspree.io/xzbjaaqy", {
+    method: "POST",
+    body: formData,
+  }).then(response => response.json())
+    .then(data => console.log(data))
+  // }
+
 
   window.setTimeout(() => {
     document.querySelector(".animate").style.animation = "none";
     document.querySelector(".animate").style.color = "white";
     document.querySelector(".animate").innerHTML =
       "Loaded <i style='margin-left: .7rem' class='fa fa-arrow-right'></>";
-      document.querySelector('body').classList.add("animated")
+    document.querySelector('body').classList.add("animated")
   }, 700);
 
   ////////////////Start Kinetic Typing///////////
@@ -126,7 +142,7 @@ opacityrevealElements.forEach((element) => {
 
 ///////////////PORTFOLIO Gallery Filter Function///////////
 
-wi(function () {
+(function () {
   $(".filter-button").click(function () {
     var value = $(this).attr("data-filter");
 
@@ -208,3 +224,4 @@ Navs.forEach((element) => {
 document.querySelector(".scroll-top").addEventListener("click", () => {
   document.querySelector(".picture").scrollIntoView({ behavior: "smooth", block: "start" });
 })
+
