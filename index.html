@@ -107,7 +107,7 @@
 
           If you’ve got a project you’d like to work on with me just get in touch and we can get to work!
           <div class="buttons">
-            <a href="./assets/Okoroji_Faith(No_picture).pdf" download>Download Resume</a>
+            <a id="request-resume-btn" style="cursor: pointer;">Request my resume</a>
             <a class="nav-item" style="cursor: pointer;" target="#contact">Contact Me</a>
           </div>
         </div>
@@ -329,6 +329,19 @@
               </div>
             </div>
 
+            <div class="item item-3 filter mobile">
+              <img src="./assets/img/oyanow_mobile.jpg" alt="" style="object-fit: contain;background-color: white;" />
+              <div class="project-desc">Oyanow Mobile</div>
+              <div class="project-tools">Tools: React Native, Redux</div>
+              <div class="hover-info">
+                <div class="info">You can view this app in the browser or on your device with the expo app</div>
+                <div class="buttons-container">
+                  <a class="demo" target="_blank" href="https://play.google.com/store/apps/details?id=com.g360synergy.oyanow"><i class="fab fa-google-play"></i> Android App</a>
+                  <a class="demo" target="_blank" href="https://apps.apple.com/us/app/oyanow/id1248784384"><i class="fab fa-app-store" style="margin-right: .25rem;"></i>IOS App</a>
+                </div>
+              </div>
+            </div>
+
             <div class="item item-1 filter mobile">
               <img src="./assets/img/Expo-Music-Player.jpeg" alt="" style="object-fit: contain;background-color: black;" />
               <div class="project-desc">Music Player</div>
@@ -350,7 +363,7 @@
                 <div class="info">This repository is private, code available on request</div>
                 <div class="buttons-container">
                   <a class="code disabled" target="_blank"><i class="fa fa-github"></i>Code</a>
-                  <a class="demo" target="_blank" href="cudium.com"><i class="fa fa-eye"></i>Demo</a>
+                  <a class="demo" target="_blank" href="https://cudium.com"><i class="fa fa-eye"></i>Visit</a>
                 </div>
               </div>
             </div>
@@ -364,6 +377,19 @@
                 <div class="buttons-container">
                   <a class="code " target="_blank" href="https://github.com/Jaybee4real/Weather-app"><i class="fa fa-github"></i>Code</a>
                   <a class="demo" target="_blank" href="https://expo.dev/@jaybee4real/weather_app"><i class="fa fa-eye"></i>Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item-2 filter web">
+              <img src="./assets/img/oyanow.jpg" alt="" />
+              <div class="project-desc">Oyanow</div>
+              <div class="project-tools">Tools: Css, Js, Jquery</div>
+              <div class="hover-info">
+                <div class="info">This repository is private, code not available</div>
+                <div class="buttons-container">
+                  <a class="code disabled" target="_blank" href=""><i class="fa fa-github"></i>Code</a>
+                  <a class="demo" target="_blank" href="https://oyanow.ng"><i class="fa fa-eye"></i>Visit</a>
                 </div>
               </div>
             </div>
@@ -535,19 +561,6 @@
 
 
 
-            <div class="item item-3 filter mobile">
-              <img src="./assets/img/oyaanow_m.jpg" alt="" style="object-fit: contain;background-color: white;" />
-              <div class="project-desc">Oyaanow Mobile <span>(Ongoing)</span></div>
-              <div class="project-tools">Tools: React Native, Expo-cli </div>
-              <div class="hover-info">
-                <div class="info">You can view this app in the browser or on your device with the expo app</div>
-                <div class="buttons-container">
-                  <a class="code" target="_blank" href="https://github.com/Jaybee4real/oyaanow-mobile"><i class="fa fa-github"></i>Code</a>
-                  <a class="demo" target="_blank" href="https://expo.io/@jaybee4real/oyaanow"><i class="fa fa-eye"></i>Demo</a>
-                </div>
-              </div>
-            </div>
-
 
             <div class="item item-3 filter web">
               <img src="./assets/img/osteopathe_draveil.jpg" alt="" />
@@ -639,18 +652,6 @@
               </div>
             </div>
 
-            <div class="item item-2 filter web">
-              <img src="./assets/img/oyaanow.jpg" alt="" />
-              <div class="project-desc">Oyaanow</div>
-              <div class="project-tools">Tools: Css, Js, Jquery</div>
-              <div class="hover-info">
-                <div class="info"></div>
-                <div class="buttons-container">
-                  <a class="code" target="_blank" href="https://github.com/oyaanow/web"><i class="fa fa-github"></i>Code</a>
-                  <a class="demo" target="_blank" href="https://oyaanow.github.io/web"><i class="fa fa-eye"></i>Demo</a>
-                </div>
-              </div>
-            </div>
 
           </div>
 
@@ -686,55 +687,23 @@
           <h2 class="subsection-header text-reveal-trigger" style="font-size: .9rem;">Fill The Form And I Will Get In
             Touch With You As Soon As Possible</h2>
 
-          <form action="https://formspree.io/xzbjaaqy" target="_blank" method="POST">
+          <form action="https://formspree.io/xzbjaaqy" target="_blank" method="POST" id="contact-form">
             <div clss="form-container">
               <div class="contact-left">
-                <input type="name" name="name" placeholder="Your Name" required />
+                <input type="name" name="name" id="contact-form-name" placeholder="Your Name" required />
                 <input type="email" name="_replyto" placeholder="Email Adress" required />
               </div>
               <div class="contact-right">
-                <textarea name="message" name="message" placeholder="Your Message" id="" cols="7" rows="6"></textarea>
+                <textarea name="message" name="message" placeholder="Your Message" id="contact-form-message" cols="7" rows="6"></textarea>
               </div>
 
             </div>
-
-
             <input id="submit_btn" type="submit" value="Send">
-
           </form>
-
         </div>
-
-
       </div>
-
-
+      <div class="bottom-note">Created by Jaybee4real (Okoroji Faith) in (2020)</div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -742,7 +711,7 @@
     <script src="https://daybrush.com/scenejs/release/latest/dist/scene.js"></script>
     <script src="https://daybrush.com/scenejs-effects/release/latest/dist/effects.js"></script>
     <script src="./assets/js/min/effects.min.js"></script>
-    <script src="./assets/js/min/main.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
