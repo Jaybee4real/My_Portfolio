@@ -86,18 +86,18 @@ move(14.5, 18, 0, 0, 0, 1);
 scene.set({
   "[data-typing='i']": Scene.typing({ text: "I ", duration: 1 }),
   "[data-typing='name']": {
-    1: Scene.typing({ text: "'m Okoroji Faith, ", duration: 1 }),
+    1: Scene.typing({ text: "'m Okoroji Faith,", duration: 1 }),
   },
   "[data-typing='engineer']": {
-    1.5: Scene.typing({ text: "A Frontend Developer", duration: 1 }),
+    1.5: Scene.typing({ text: "A Front End Engineer", duration: 1 }),
   },
   "[data-typing='with']": {
     3.3: Scene.typing({ text: "with", duration: 0.5 }),
   },
   "[data-typing='skills-in']": {
-    4.5: Scene.typing({ text: "Skills In", duration: 1 }),
+    4.5: Scene.typing({ text: "skills In", duration: 1 }),
   },
-  "[data-typing='typescript']": {
+  "[data-typing='javascript']": {
     6: Scene.typing({ text: "Javascript", duration: 1 }),
   },
   "[data-typing='css']": {

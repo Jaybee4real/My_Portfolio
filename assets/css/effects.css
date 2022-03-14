@@ -17,7 +17,7 @@ body {
 :root {
   --theme-color: orange;
   --secondary-color: white;
-  --background-color: #e9e9e9;
+  --background-color: #fff;
   --text-color-1: orange;
   --text-color-2: black;
 }
@@ -97,6 +97,7 @@ body.animated{
   left: 80px;
   font-size: 26px;
   letter-spacing: 1px;
+  min-width: 300px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -129,14 +130,15 @@ body.animated{
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   font-size: 32px;
+  min-width: 300px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: 900;
 }
 
-[data-typing="typescript"] {
-  top: 87px;
+[data-typing="javascript"] {
+  top: 90px;
   right: 110px;
   font-size: 25px;
   font-weight: 900;
